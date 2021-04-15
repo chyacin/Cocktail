@@ -6,10 +6,9 @@ const CocktailList = ({ cocktails }) => (
   <div>
     { cocktails.map((cocktail) => (
       <Cocktail
-        name={cocktail.name}
-        image={cocktail.image}
-        recette={cocktail.recette}
-        key={cocktail.name}
+        name={cocktail.strDrink}
+        image={cocktail.strDrinkThumb}
+        key={cocktail.idDrink}
       />
     ))}
   </div>
