@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import CocktailList from './component/CocktailList/CocktailList';
+import Header from './component/Header/Header';
 
 const cocktailList = [
   {
@@ -36,15 +37,9 @@ const cocktailList = [
 ];
 
 function App() {
-  const [nameCocktail, setNameCocktail] = useState('margarita');
-  useEffect(() => {
-    setNameCocktail('');
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${nameCocktail}`)
-      .then((response) => response.json())
-      .then((data) => console.log(data));
-  }, []);
   return (
     <div>
+      <Header />
       <CocktailList cocktails={cocktailList} />
     </div>
   );
