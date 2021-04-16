@@ -1,8 +1,9 @@
 import './CocktailList.css';
 import React from 'react';
 import PropTypes from 'prop-types';
+import Modal from './Modal';
 
-function Cocktail({ image, name, recette }) {
+function Cocktail({ image, name }) {
   return (
     <div className="cards">
       <div className="card">
@@ -10,7 +11,7 @@ function Cocktail({ image, name, recette }) {
           <img className="card-img" src={image} alt="illustration" />
           <div className="card-body">
             <h2 className="card-title">{name}</h2>
-            <button type="button" className="card-button">{recette}</button>
+            <Modal />
           </div>
         </div>
       </div>
@@ -21,6 +22,6 @@ function Cocktail({ image, name, recette }) {
 Cocktail.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  recette: PropTypes.string.isRequired,
 };
+
 export default Cocktail;
