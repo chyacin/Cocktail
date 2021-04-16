@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import Cocktail from './Cocktail';
 
 const CocktailList = ({ cocktails }) => (
-  <div>
+  <div className="contenu">
     { cocktails.map((cocktail) => (
       <Cocktail
-        name={cocktail.name}
-        image={cocktail.image}
-        recette={cocktail.recette}
-        key={cocktail.name}
+        name={cocktail.strDrink}
+        image={cocktail.strDrinkThumb}
+        key={cocktail.idDrink}
       />
     ))}
   </div>

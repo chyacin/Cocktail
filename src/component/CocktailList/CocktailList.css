@@ -1,5 +1,5 @@
 
-.cards {
+  .cards {
     margin-top: 10px;
     align-items: center;
     flex-wrap: wrap;
@@ -15,6 +15,7 @@
     flex-direction: column; 
     box-shadow: 8px 8px 20px lightgray;
     background-color: whitesmoke;
+    border: 3px solid #d4d519;
   }
 
   .card-img {
@@ -23,10 +24,11 @@
     /*background-position: center; */
     height: 200px;
     width: 100%;
+    
   }
 
   .card-body {
-    padding: 10px 20px;
+    padding: 10px 20px; 
   }
   
   .card-body h2 {
@@ -37,10 +39,16 @@
     border: none;
     border-radius: 10px;
     height: 50px;
-    background-color: #f1696c;
+    background-color: #19202a;
     width: 100%;
     font-weight: bold;
     color: whitesmoke;
     font-size: 18px;
     cursor: pointer;
+  }
+  .contenu
+  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }

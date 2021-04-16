@@ -18,7 +18,6 @@ function Cocktail({ image, name }) {
     </div>
   );
 }
-
 Cocktail.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
