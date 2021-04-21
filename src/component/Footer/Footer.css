@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .column h1 {
     display: inline;
     color: #f1356d;
@@ -86,6 +87,7 @@ h5 {
 .dropdown:hover .button {
     background-color: #3e8e41;
 }
+
 .dropdown {
     background-image: url("footerimg.png");
     background-repeat: no-repeat;
