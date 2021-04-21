@@ -4,14 +4,11 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-<<<<<<< HEAD
-    margin-bottom: 10px;
-=======
     background-image: url("footerimg.png");
     background-repeat: no-repeat;
     background-size: cover;
->>>>>>> dc56e8e6e998fa3e7df0b0a2c2cb8631c2c4d07b
 }
+
 .column h1 {
     display: inline;
     color: #f1356d;
@@ -90,6 +87,7 @@ h5 {
 .dropdown:hover .button {
     background-color: #3e8e41;
 }
+
 .dropdown {
     background-image: url("footerimg.png");
     background-repeat: no-repeat;
