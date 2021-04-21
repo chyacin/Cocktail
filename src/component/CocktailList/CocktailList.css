@@ -13,7 +13,7 @@
     margin: 20px;
     display: flex;
     flex-direction: column; 
-    box-shadow: 8px 8px 20px lightgray;
+    box-shadow: 8px 8px 20px #1f8187;
     background-color: whitesmoke;
     border: 3px solid #d4d519;
   }
