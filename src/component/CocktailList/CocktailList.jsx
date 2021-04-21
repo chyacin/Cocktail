@@ -8,7 +8,11 @@ const CocktailList = ({ cocktails }) => (
       <Cocktail
         name={cocktail.strDrink}
         image={cocktail.strDrinkThumb}
-        ingredient={cocktail.strIngredient1}
+        ingredient1={cocktail.strIngredient1}
+        ingredient2={cocktail.strIngredient2}
+        ingredient3={cocktail.strIngredient3}
+        ingredient4={cocktail.strIngredient4}
+        ingredient5={cocktail.strIngredient5}
         key={cocktail.idDrink}
       />
     ))}
