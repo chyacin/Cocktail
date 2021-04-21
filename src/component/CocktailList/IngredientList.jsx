@@ -5,7 +5,7 @@ function IngredientList({
   ingredient1, ingredient2, ingredient3, ingredient4, ingredient5,
 }) {
   return (
-    <div>
+    <div className="ingredient">
       <p>{ingredient1}</p>
       <p>{ingredient2}</p>
       <p>{ingredient3}</p>

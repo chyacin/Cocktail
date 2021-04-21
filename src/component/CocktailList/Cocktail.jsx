@@ -2,6 +2,7 @@ import './CocktailList.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from './Modal';
+import IngredientList from './IngredientList';
 
 function Cocktail({
   image, name, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5,
@@ -13,15 +14,18 @@ function Cocktail({
           <img className="card-img" src={image} alt="illustration" />
           <div className="card-body">
             <h2 className="card-title">{name}</h2>
-            <Modal
-              name={name}
-              image={image}
-              ingredient1={ingredient1}
-              ingredient2={ingredient2}
-              ingredient3={ingredient3}
-              ingredient4={ingredient4}
-              ingredient5={ingredient5}
-            />
+            <Modal>
+              <span className="close">&times;</span>
+              <h2 className="card-title">{name}</h2>
+              <img className="modal-img" src={image} alt="illustration" />
+              <IngredientList
+                ingredient1={ingredient1}
+                ingredient2={ingredient2}
+                ingredient3={ingredient3}
+                ingredient4={ingredient4}
+                ingredient5={ingredient5}
+              />
+            </Modal>
           </div>
         </div>
       </div>
