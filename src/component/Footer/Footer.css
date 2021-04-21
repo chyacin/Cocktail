@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 
 .column h1 {

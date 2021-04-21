@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
 import Footer from './component/Footer/Footer';
 import CocktailList from './component/CocktailList/CocktailList';
 import Header from './component/Header/Header';
