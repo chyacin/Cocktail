@@ -8,9 +8,13 @@ import Header from './component/Header/Header';
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
   useEffect(() => {
-    fetch('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=m')
-      .then((response) => response.json())
-      .then((data) => setCocktailList(data.drinks));
+    'abcdefghijklmnopqrstuvwxyz0123456789'.split('').forEach((letter) => {
+      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
+        .then((response) => response.json())
+        .then((data) => data.drinks && setCocktailList(
+          (previousValue) => [...previousValue, ...data.drinks],
+        ));
+    });
   }, []);
   return (
     <div>

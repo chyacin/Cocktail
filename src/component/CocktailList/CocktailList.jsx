@@ -8,6 +8,7 @@ const CocktailList = ({ cocktails }) => (
       <Cocktail
         name={cocktail.strDrink}
         image={cocktail.strDrinkThumb}
+        ingredient={cocktail.strIngredient1}
         key={cocktail.idDrink}
       />
     ))}

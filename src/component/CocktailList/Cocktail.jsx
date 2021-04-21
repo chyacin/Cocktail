@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from './Modal';
 
-function Cocktail({ image, name }) {
+function Cocktail({ image, name, ingredient }) {
   return (
     <div className="cards">
       <div className="card">
@@ -11,6 +11,7 @@ function Cocktail({ image, name }) {
           <img className="card-img" src={image} alt="illustration" />
           <div className="card-body">
             <h2 className="card-title">{name}</h2>
+            <p>{ingredient}</p>
             <Modal />
           </div>
         </div>
@@ -21,6 +22,7 @@ function Cocktail({ image, name }) {
 Cocktail.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  ingredient: PropTypes.string.isRequired,
 };
 
 export default Cocktail;
