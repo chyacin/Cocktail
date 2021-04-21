@@ -7,6 +7,7 @@
     background-image: url("footerimg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    border-top: 3px solid #d4d519;
 }
 .column h1 {
     display: inline;
@@ -26,9 +27,13 @@ h5 {
 
 .column {
     display: flex;
+    margin: auto;
     flex-direction: column;
-    text-align: left;
-    margin-left: 60px;
+}
+.column h1 {
+    color: #FFF;
+    display: flex;
+    margin: auto;
 }
 
 .row {

@@ -31,9 +31,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="column">
-          <h1>Le bouton bonne conscience</h1>
-        </div>
       </div>
     </footer>
   );

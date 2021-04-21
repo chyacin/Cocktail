@@ -6,7 +6,7 @@ function Modal({ image, name, recette }) {
   const [isOpen, setIsOpen] = useState(false);
 
   if (isOpen === false) {
-    return <button type="button" onClick={() => { setIsOpen(true); }}>Ouvrir</button>;
+    return <button className="modalButton" type="button" onClick={() => { setIsOpen(true); }}>Détails</button>;
   }
   return (
     <div id="myModal" className="modal">
