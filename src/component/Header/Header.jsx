@@ -1,11 +1,11 @@
 import './Header.css';
 import React from 'react';
-import headerLogo from './headerLogo.jpg';
+import headerLogo from './headerLogo.png';
 
 const Header = () => (
   <header className="header">
     <img className="codeTailsImg" src={headerLogo} alt="logo" />
-    <h1 contentEditable spellCheck="false">Wild Code&apos;Tails</h1>
+    <h1 contentEditable spellCheck="false">WELCOME</h1>
     <nav className="navbar">
       <div className="links">
         <ul>

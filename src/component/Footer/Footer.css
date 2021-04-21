@@ -4,8 +4,10 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    background-image: url("footerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .column h1 {
     display: inline;
     color: #f1356d;
@@ -61,6 +63,9 @@ h5 {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    background-image: url("footerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .dropdown-content a {
@@ -80,4 +85,9 @@ h5 {
 
 .dropdown:hover .button {
     background-color: #3e8e41;
+}
+.dropdown {
+    background-image: url("footerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
