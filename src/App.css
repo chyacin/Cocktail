@@ -42,6 +42,13 @@ body{
   background-size: cover;
 }
 
-.links {
+.link {
   color: rgb(255, 255, 255);
+  padding-left: 22vh;
+  justify-content: space-between;
+  display: inline-flex;
+}
+
+.hello {
+  color: rgb(255, 255, 255); 
 }

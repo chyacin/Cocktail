@@ -5,19 +5,19 @@ function Navigation() {
   return (
     <ul>
       <Link to="/cocktails">
-        <p className="links">Home Page</p>
+        <p className="link">Home Page</p>
       </Link>
       <Link to="/lesincontournables">
-        <p className="links">Les Incontournables</p>
+        <p className="link">The Classics</p>
       </Link>
       <Link to="/créermoncocktail">
-        <p className="links">Créer mon cocktail</p>
+        <p className="link">Create!</p>
       </Link>
       <Link to="/cocktaildujour">
-        <p className="links">Cocktail du jour</p>
+        <p className="link">Cocktail of the day</p>
       </Link>
       <Link to="/mesfavoris">
-        <p className="links">Mes Favoris</p>
+        <p className="link">Favorites</p>
       </Link>
     </ul>
   );

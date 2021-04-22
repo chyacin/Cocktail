@@ -5,10 +5,10 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Footer from './component/Footer/Footer';
 import CocktailList from './component/CocktailList/CocktailList';
 import Header from './component/Header/Header';
-import LesIncontournables from './component/Header/LesIncontournables';
-import CréerMonCocktail from './component/Header/CréerMonCocktail';
-import CocktailDuJour from './component/Header/CocktailDuJour';
-import MesFavoris from './component/Header/MesFavoris';
+import TheClassics from './component/Header/TheClassics';
+import Create from './component/Header/Create';
+import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
+import Favorites from './component/Header/Favorites';
 import Navigation from './component/Header/Navigation';
 import SearchBar from './component/SearchBar/SearchBar';
 
@@ -33,15 +33,10 @@ function App() {
       <Route path="/cocktails" exact>
         <CocktailList cocktails={cocktailList} />
       </Route>
-      <Route path="/lesincontournables" exact component={LesIncontournables} />
-      <Route path="/créermoncocktail" exact component={CréerMonCocktail} />
-      <Route path="/cocktaildujour" exact component={CocktailDuJour} />
-      <Route path="/mesfavoris" exact component={MesFavoris} />
-      <SearchBar getQuery={(q) => setQuery(q)} />
-      <CocktailList cocktails={cocktailList.filter(
-        (cocktail) => cocktail.strDrink.toLowerCase().includes(query.toLowerCase()),
-      )}
-      />
+      <Route path="/lesincontournables" exact component={TheClassics} />
+      <Route path="/créermoncocktail" exact component={Create} />
+      <Route path="/cocktaildujour" exact component={CocktailOfTheDay} />
+      <Route path="/mesfavoris" exact component={Favorites} />
       <Footer />
     </BrowserRouter>
   );
