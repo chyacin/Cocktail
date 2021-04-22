@@ -4,6 +4,10 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    background-image: url("footerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 3px solid #d4d519;
 }
 
 .column h1 {
@@ -24,9 +28,13 @@ h5 {
 
 .column {
     display: flex;
+    margin: auto;
     flex-direction: column;
-    text-align: left;
-    margin-left: 60px;
+}
+.column h1 {
+    color: #FFF;
+    display: flex;
+    margin: auto;
 }
 
 .row {
@@ -61,6 +69,9 @@ h5 {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    background-image: url("footerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .dropdown-content a {
@@ -80,4 +91,10 @@ h5 {
 
 .dropdown:hover .button {
     background-color: #3e8e41;
+}
+
+.dropdown {
+    background-image: url("footerimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

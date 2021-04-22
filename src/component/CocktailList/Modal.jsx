@@ -6,7 +6,7 @@ function Modal({ children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   if (isOpen === false) {
-    return <button type="button" onClick={() => { setIsOpen(true); }}>Open</button>;
+    return <button className="modalButton" type="button" onClick={() => { setIsOpen(true); }}>Details</button>;
   }
   return (
     <div id="myModal" className="modal">

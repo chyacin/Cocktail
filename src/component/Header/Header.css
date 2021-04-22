@@ -61,7 +61,6 @@ img {
 
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
 
 :root {
@@ -76,7 +75,8 @@ img {
     width: 150px;
     height: 150px;
     padding-top: 3vh;
-    padding-right: 3vh;
+    padding-right: 5vh;
+    padding-left: 3vh;
 }
 .header h1 {
     font-size: 4rem;
@@ -88,6 +88,7 @@ img {
     border-radius: 2rem;
     text-transform: uppercase;
     animation: flicker 4s infinite alternate;
+    margin-left: 6vh;
 }
 h1::-moz-selection {
   background-color: var(--neon-border-color);
@@ -134,8 +135,7 @@ h1:focus {
 .header {
     display: flex;
     padding: 1vh 0;
-    background-color: #19202a;
-    border-bottom: 5px solid #d4d519;
+    border-bottom: 3px solid #d4d519;
 }
 .links ul {
     display: flex;
@@ -156,13 +156,12 @@ h1:focus {
     margin-left: 16px;
     text-decoration: none;
     padding: 6px;
-    background-color: #19202a;
+    background-color: #101728;
     border: 2px solid #1f8187;
     color: white;
     font-size: 2vh;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #1f8187;
-    font-family: 'Architects Daughter', cursive;
 }
 
 .navbar button:hover {
