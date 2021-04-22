@@ -9,6 +9,7 @@
     background-size: cover;
     border-top: 3px solid #d4d519;
 }
+
 .column h1 {
     display: inline;
     color: #f1356d;
@@ -91,6 +92,7 @@ h5 {
 .dropdown:hover .button {
     background-color: #3e8e41;
 }
+
 .dropdown {
     background-image: url("footerimg.png");
     background-repeat: no-repeat;
