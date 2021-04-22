@@ -2,15 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function IngredientList({
-  ingredient1, ingredient2, ingredient3, ingredient4, ingredient5,
+  ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, instruction,
 }) {
   return (
     <div className="ingredient">
-      <p>{ingredient1}</p>
+      <p>
+        {ingredient1}
+        :
+        <strong>gege</strong>
+      </p>
       <p>{ingredient2}</p>
       <p>{ingredient3}</p>
       <p>{ingredient4}</p>
       <p>{ingredient5}</p>
+      <p>{ingredient6}</p>
+      <h4>{instruction}</h4>
     </div>
   );
 }
@@ -21,6 +27,8 @@ IngredientList.propTypes = {
   ingredient3: PropTypes.string.isRequired,
   ingredient4: PropTypes.string.isRequired,
   ingredient5: PropTypes.string.isRequired,
+  ingredient6: PropTypes.string.isRequired,
+  instruction: PropTypes.string.isRequired,
 };
 
 export default IngredientList;
