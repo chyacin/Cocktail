@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 function Navigation() {
   return (
     <ul>
-      <Link to="/cocktails">
+      <Link to="/">
         <p className="link">Home Page</p>
       </Link>
-      <Link to="/lesincontournables">
+      <Link to="/the-classics">
         <p className="link">The Classics</p>
       </Link>
-      <Link to="/créermoncocktail">
+      <Link to="/create">
         <p className="link">Create!</p>
       </Link>
-      <Link to="/cocktaildujour">
+      <Link to="/cocktail-of-the-day">
         <p className="link">Cocktail of the day</p>
       </Link>
-      <Link to="/mesfavoris">
+      <Link to="/favorites">
         <p className="link">Favorites</p>
       </Link>
     </ul>

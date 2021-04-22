@@ -12,7 +12,6 @@ import Favorites from './component/Header/Favorites';
 import Navigation from './component/Header/Navigation';
 import SearchBar from './component/SearchBar/SearchBar';
 
-
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
   const [query, setQuery] = useState('');
@@ -30,13 +29,17 @@ function App() {
     <BrowserRouter>
       <Header />
       <Navigation />
-      <Route path="/cocktails" exact>
-        <CocktailList cocktails={cocktailList} />
+      <Route path="/" exact>
+        <SearchBar getQuery={(q) => setQuery(q)} />
+        <CocktailList cocktails={cocktailList.filter(
+          (cocktail) => cocktail.strDrink.toLowerCase().includes(query.toLowerCase()),
+        )}
+        />
       </Route>
-      <Route path="/lesincontournables" exact component={TheClassics} />
-      <Route path="/créermoncocktail" exact component={Create} />
-      <Route path="/cocktaildujour" exact component={CocktailOfTheDay} />
-      <Route path="/mesfavoris" exact component={Favorites} />
+      <Route path="/the-classics" exact component={TheClassics} />
+      <Route path="/create" exact component={Create} />
+      <Route path="/cocktail-of-the-day" exact component={CocktailOfTheDay} />
+      <Route path="/favorites" exact component={Favorites} />
       <Footer />
     </BrowserRouter>
   );
