@@ -13,6 +13,8 @@ const CocktailList = ({ cocktails }) => (
         ingredient3={cocktail.strIngredient3}
         ingredient4={cocktail.strIngredient4}
         ingredient5={cocktail.strIngredient5}
+        ingredient6={cocktail.strIngredient6}
+        instruction={cocktail.strInstructions}
         key={cocktail.idDrink}
       />
     ))}

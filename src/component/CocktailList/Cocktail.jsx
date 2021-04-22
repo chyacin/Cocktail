@@ -5,7 +5,8 @@ import Modal from './Modal';
 import IngredientList from './IngredientList';
 
 function Cocktail({
-  image, name, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5,
+  image, name, ingredient1, ingredient2, ingredient3,
+  ingredient4, ingredient5, ingredient6, instruction,
 }) {
   return (
     <div className="cards">
@@ -24,6 +25,8 @@ function Cocktail({
                 ingredient3={ingredient3}
                 ingredient4={ingredient4}
                 ingredient5={ingredient5}
+                ingredient6={ingredient6}
+                instruction={instruction}
               />
             </Modal>
           </div>
@@ -40,6 +43,8 @@ Cocktail.propTypes = {
   ingredient3: PropTypes.string.isRequired,
   ingredient4: PropTypes.string.isRequired,
   ingredient5: PropTypes.string.isRequired,
+  ingredient6: PropTypes.string.isRequired,
+  instruction: PropTypes.string.isRequired,
 };
 
 export default Cocktail;

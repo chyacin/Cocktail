@@ -70,8 +70,8 @@
     bottom: 0;
     text-align: center;
   }
-  .modal-content {
-    height: 600px;
+  .modal-content{
+    height: auto;
     width: 700px;
     background: white;
     position: fixed;
@@ -85,7 +85,16 @@
   }
   .card-button {
     width: 10vh;
+    margin-bottom: 1vh;
   }
   .ingredient p {
     font-size: 2vh;
+  }
+  h4{
+    border-top: 2px solid lightgrey;
+    font-size: 1.8vh;
+    padding-top: 1vh;
+  }
+  strong {
+    margin-left: 2vh;
   }
