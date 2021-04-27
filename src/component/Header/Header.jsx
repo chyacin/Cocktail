@@ -7,7 +7,7 @@ const Header = () => (
   <header className="header">
     <img className="codeTailsImg" src={headerLogo} alt="logo" />
     <h1 contentEditable spellCheck="false">WELCOME</h1>
-    <ul className="ullist">
+    <nav className="navlist">
       <Link className="link" to="/">
         Home Page
       </Link>
@@ -23,7 +23,7 @@ const Header = () => (
       <Link className="link" to="/favorites">
         Favorites
       </Link>
-    </ul>
+    </nav>
   </header>
 );
 
