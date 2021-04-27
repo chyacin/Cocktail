@@ -167,5 +167,21 @@ h1:focus {
 .navbar button:hover {
     color: #b62456;
 }
+.ullist p {
+    display: inline-flex;
+    margin-left: 11vh;
+    padding: 6px;
+    max-width: 18vh;
+    background-color: #101728;
+    border: 2px solid #1f8187;
+    color: white;
+    font-size: 2vh;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #1f8187;
+}
+.ullist {
+    padding-top: 5vh;
+
+}
 }
 

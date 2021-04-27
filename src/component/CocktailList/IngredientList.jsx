@@ -6,17 +6,13 @@ function IngredientList({
 }) {
   return (
     <div className="ingredient">
-      <p>
-        {ingredient1}
-        :
-        <strong>gege</strong>
-      </p>
+      <p>{ingredient1}</p>
       <p>{ingredient2}</p>
       <p>{ingredient3}</p>
       <p>{ingredient4}</p>
       <p>{ingredient5}</p>
       <p>{ingredient6}</p>
-      <h4>{instruction}</h4>
+      <div className="instructions">{instruction}</div>
     </div>
   );
 }

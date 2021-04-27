@@ -9,7 +9,6 @@ import TheClassics from './component/Header/TheClassics';
 import Create from './component/Header/Create';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
 import Favorites from './component/Header/Favorites';
-import Navigation from './component/Header/Navigation';
 import SearchBar from './component/SearchBar/SearchBar';
 
 function App() {
@@ -28,7 +27,6 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Navigation />
       <Route path="/" exact>
         <SearchBar getQuery={(q) => setQuery(q)} />
         <CocktailList cocktails={cocktailList.filter(

@@ -2,12 +2,14 @@
 .footer {
     background: white;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
     background-image: url("footerimg.png");
     background-repeat: no-repeat;
     background-size: cover;
     border-top: 3px solid #d4d519;
+    /*position: fixed;*/
+    /*bottom:0;*/
+    width:100%;
+    padding-top: 1vh;
 }
 
 .column h1 {
@@ -39,7 +41,7 @@ h5 {
 
 .row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
     text-align: center;
     justify-content: space-around;
