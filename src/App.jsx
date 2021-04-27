@@ -6,7 +6,7 @@ import Footer from './component/Footer/Footer';
 import CocktailList from './component/CocktailList/CocktailList';
 import Header from './component/Header/Header';
 import TheClassics from './component/Header/TheClassics';
-import Create from './component/Header/Create';
+import CreateCocktail from './component/Header/CreateCocktail';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
 import Favorites from './component/Header/Favorites';
 import SearchBar from './component/SearchBar/SearchBar';
@@ -35,7 +35,9 @@ function App() {
         />
       </Route>
       <Route path="/the-classics" exact component={TheClassics} />
-      <Route path="/create" exact component={Create} />
+      <Route path="/create" exact component={CreateCocktail}>
+        <CreateCocktail cocktails={cocktailList} />
+      </Route>
       <Route path="/cocktail-of-the-day" exact>
         <CocktailOfTheDay cocktails={cocktailList} />
       </Route>
