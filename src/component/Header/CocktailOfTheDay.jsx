@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { BiDrink } from 'react-icons/bi';
+import Cocktail from '../CocktailList/Cocktail';
+import './CocktailOfTheDay.css';
 
-function CocktailOfTheDay() {
+function CocktailOfTheDay({ cocktails }) {
+  const [randomCocktail, setRandomCocktail] = useState();
+
+  const generateRandomCocktail = () => {
+    const cocktailIndex = Math.floor(Math.random() * cocktails.length);
+    setRandomCocktail(cocktails[cocktailIndex]);
+  };
   return (
-    <h1 className="hello">Hello from Cocktail of the day</h1>
+    <div className="contenu">
+      { randomCocktail && (
+        <Cocktail
+          name={randomCocktail.strDrink}
+          image={randomCocktail.strDrinkThumb}
+          ingredient1={randomCocktail.strIngredient1}
+          ingredient2={randomCocktail.strIngredient2}
+          ingredient3={randomCocktail.strIngredient3}
+          ingredient4={randomCocktail.strIngredient4}
+          ingredient5={randomCocktail.strIngredient5}
+          ingredient6={randomCocktail.strIngredient6}
+          instruction={randomCocktail.strInstructions}
+          key={randomCocktail.idDrink}
+        />
+      )}
+      <BiDrink size={30} className="button" p onClick={() => generateRandomCocktail()} type="submit" style={{ backgroundColor: 'transparent' }} />
+      <div className="glass">
+        <p>Click on the cocktail glass</p>
+      </div>
+    </div>
   );
 }
-
+CocktailOfTheDay.propTypes = {
+  cocktails: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
 export default CocktailOfTheDay;
