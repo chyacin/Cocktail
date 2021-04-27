@@ -15,6 +15,7 @@ import SearchBar from './component/SearchBar/SearchBar';
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
   const [query, setQuery] = useState('');
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     'abcdefghijklmnopqrstuvwxyz0123456789'.split('').forEach((letter) => {
@@ -24,17 +25,23 @@ function App() {
           (previousValue) => [...previousValue, ...data.drinks],
         ));
     });
-  }, []);
+  }, setCocktailList.sort);
   return (
     <BrowserRouter>
-      <Header />
       <Navigation />
+      <Header />
       <Route path="/" exact>
         <SearchBar getQuery={(q) => setQuery(q)} />
         <CocktailList cocktails={cocktailList.filter(
-          (cocktail) => cocktail.strDrink.toLowerCase().includes(query.toLowerCase()),
+          (cocktail) => (
+            cocktail.strDrink.toLowerCase().includes(query.toLowerCase())
+          ),
+        ).slice(
+          (page - 1) * 10, page * 10,
         )}
         />
+        {page > 1 ? <button type="button" onClick={() => setPage(page - 1)}>Page précédente</button> : ''}
+        <button type="button" onClick={() => setPage(page + 1)}>Page suivante</button>
       </Route>
       <Route path="/the-classics" exact component={TheClassics} />
       <Route path="/create" exact component={Create} />
