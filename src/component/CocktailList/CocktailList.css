@@ -35,7 +35,7 @@
     border: none;
     border-radius: 10px;
     height: 50px;
-    background-color: #19202a;
+    background-color: #1f8187;
     width: 100%;
     font-weight: bold;
     color: whitesmoke;
@@ -72,15 +72,19 @@
   .modal-content{
     height: auto;
     width: 700px;
-    background: white;
+    background: #101728;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    color: white;
+    border: 2px solid lightgrey;
+    border-radius: 2%;
   }
   .modal-img {
     height: 150px;
     width: 150px;
+    border: 3px solid #1f8187;;
   }
   .card-button {
     width: 10vh;
@@ -89,10 +93,11 @@
   .ingredient p {
     font-size: 2vh;
   }
-  h4{
+  .instructions{
     border-top: 2px solid lightgrey;
     font-size: 1.8vh;
-    padding-top: 1vh;
+    padding: 2vh 0;
+    font-style: italic;
   }
   strong {
     margin-left: 2vh;
