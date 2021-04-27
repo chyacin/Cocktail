@@ -16,7 +16,6 @@ function Cocktail({
           <div className="card-body">
             <h2 className="card-title">{name}</h2>
             <Modal>
-              <span className="close">&times;</span>
               <h2 className="card-title">{name}</h2>
               <img className="modal-img" src={image} alt="illustration" />
               <IngredientList
