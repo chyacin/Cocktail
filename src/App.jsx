@@ -36,7 +36,9 @@ function App() {
       </Route>
       <Route path="/the-classics" exact component={TheClassics} />
       <Route path="/create" exact component={Create} />
-      <Route path="/cocktail-of-the-day" exact component={CocktailOfTheDay} />
+      <Route path="/cocktail-of-the-day" exact>
+        <CocktailOfTheDay cocktails={cocktailList} />
+      </Route>
       <Route path="/favorites" exact component={Favorites} />
       <Footer />
     </BrowserRouter>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactStars from 'react-stars';
 import './Footer.css';
+import { AiOutlineTeam } from 'react-icons/ai';
 
 const Footer = () => {
   const [rating, setRating] = useState(0);
@@ -47,6 +48,13 @@ const Footer = () => {
             fullSymbol="fa fa-star fa-2x star"
             initialRating={rating}
             onClick={(rate) => setRating(rate)}
+          />
+        </div>
+        <div className="column">
+          <h1>About Us</h1>
+          <AiOutlineTeam
+            size={50}
+            linkedin="Calvin"
           />
         </div>
       </div>
