@@ -22,11 +22,14 @@ const Footer = () => {
         </div>
         <div className="column">
           <h1>About Us</h1>
-          <div className="dropdown">
-            <AiOutlineTeam
-              size={50}
-            />
-          </div>
+          <AiOutlineTeam
+            size={50}
+            linkedin="Calvin"
+            // linkedin =""
+            // linkedin =""
+            // linkedin =""
+            // linkedin =""
+          />
         </div>
       </div>
     </footer>
