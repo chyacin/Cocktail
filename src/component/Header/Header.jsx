@@ -8,20 +8,20 @@ const Header = () => (
     <img className="codeTailsImg" src={headerLogo} alt="logo" />
     <h1 contentEditable spellCheck="false">WELCOME</h1>
     <ul className="ullist">
-      <Link to="/">
-        <p className="link">Home Page</p>
+      <Link className="link" to="/">
+        Home Page
       </Link>
-      <Link to="/the-classics">
-        <p className="link">The Classics</p>
+      <Link className="link" to="/the-classics">
+        The Classics
       </Link>
-      <Link to="/create">
-        <p className="link">Create Cocktail</p>
+      <Link className="link" to="/create">
+        Create Cocktail
       </Link>
-      <Link to="/cocktail-of-the-day">
-        <p className="link">Cocktail of the day</p>
+      <Link className="link" to="/cocktail-of-the-day">
+        Cocktail of the day
       </Link>
-      <Link to="/favorites">
-        <p className="link">Favorites</p>
+      <Link className="link" to="/favorites">
+        Favorites
       </Link>
     </ul>
   </header>

@@ -167,7 +167,7 @@ h1:focus {
 .navbar button:hover {
     color: #b62456;
 }
-.ullist p {
+.ullist .link {
     display: inline-flex;
     margin-left: 11vh;
     padding: 6px;
