@@ -24,13 +24,12 @@ function CocktailOfTheDay({ cocktails }) {
           ingredient5={randomCocktail.strIngredient5}
           ingredient6={randomCocktail.strIngredient6}
           instruction={randomCocktail.strInstructions}
-          key={randomCocktail.idDrink}
         />
       )}
-      <BiDrink size={30} className="button" p onClick={() => generateRandomCocktail()} type="submit" style={{ backgroundColor: 'transparent' }} />
-      <div className="glass">
-        <p>Click on the cocktail glass</p>
-      </div>
+      <BiDrink size={30} className="button" p onClick={() => generateRandomCocktail()} type="button" style={{ backgroundColor: 'transparent' }} />
+      <p className="glass">
+        Click on the cocktail glass
+      </p>
     </div>
   );
 }
