@@ -9,7 +9,6 @@ import TheClassics from './component/Header/TheClassics';
 import Create from './component/Header/Create';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
 import Favorites from './component/Header/Favorites';
-import Navigation from './component/Header/Navigation';
 import SearchBar from './component/SearchBar/SearchBar';
 
 function App() {
@@ -45,7 +44,9 @@ function App() {
       </Route>
       <Route path="/the-classics" exact component={TheClassics} />
       <Route path="/create" exact component={Create} />
-      <Route path="/cocktail-of-the-day" exact component={CocktailOfTheDay} />
+      <Route path="/cocktail-of-the-day" exact>
+        <CocktailOfTheDay cocktails={cocktailList} />
+      </Route>
       <Route path="/favorites" exact component={Favorites} />
       <Footer />
     </BrowserRouter>

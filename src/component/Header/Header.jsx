@@ -1,20 +1,28 @@
 import './Header.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import headerLogo from './headerLogo.png';
 
 const Header = () => (
   <header className="header">
     <img className="codeTailsImg" src={headerLogo} alt="logo" />
     <h1 contentEditable spellCheck="false">WELCOME</h1>
-    <nav className="navbar">
-      <div className="links">
-        <ul>
-          <li><button type="button">Les incontournables</button></li>
-          <li><button type="button">Créer mon cocktail</button></li>
-          <li><button type="button">Cocktail du jour</button></li>
-          <li><button type="button">Ma sélection</button></li>
-        </ul>
-      </div>
+    <nav className="navlist">
+      <Link className="link" to="/">
+        Home Page
+      </Link>
+      <Link className="link" to="/the-classics">
+        The Classics
+      </Link>
+      <Link className="link" to="/create">
+        Create Cocktail
+      </Link>
+      <Link className="link" to="/cocktail-of-the-day">
+        Cocktail of the day
+      </Link>
+      <Link className="link" to="/favorites">
+        Favorites
+      </Link>
     </nav>
   </header>
 );
