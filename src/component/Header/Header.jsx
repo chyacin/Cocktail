@@ -11,9 +11,6 @@ const Header = () => (
       <Link className="link" to="/">
         Home Page
       </Link>
-      <Link className="link" to="/the-classics">
-        The Classics
-      </Link>
       <Link className="link" to="/create">
         Create Cocktail
       </Link>
