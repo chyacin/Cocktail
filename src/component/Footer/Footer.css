@@ -55,13 +55,13 @@ h5 {
     justify-content: space-between;
 }
 
-p {
+.column p {
     color: black;
     font-size: 2vh;
     font-style: italic;
 }
 
-p:hover {
+.column p:hover {
     color: #b62456;
 }
 
