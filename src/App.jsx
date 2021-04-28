@@ -25,7 +25,7 @@ function App() {
           (previousValue) => [...previousValue, ...data.drinks],
         ));
     });
-  }, setCocktailList.sort);
+  }, []);
   return (
     <BrowserRouter>
       <Navigation />
