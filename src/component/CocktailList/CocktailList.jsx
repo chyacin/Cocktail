@@ -14,6 +14,14 @@ const CocktailList = ({ cocktails }) => (
         ingredient4={cocktail.strIngredient4}
         ingredient5={cocktail.strIngredient5}
         ingredient6={cocktail.strIngredient6}
+        ingredient7={cocktail.strIngredient7}
+        measure1={cocktail.strMeasure1}
+        measure2={cocktail.strMeasure2}
+        measure3={cocktail.strMeasure3}
+        measure4={cocktail.strMeasure4}
+        measure5={cocktail.strMeasure5}
+        measure6={cocktail.strMeasure6}
+        measure7={cocktail.strMeasure7}
         instruction={cocktail.strInstructions}
         key={cocktail.idDrink}
       />
