@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import { BrowserRouter, Route } from 'react-router-dom';
+import axios from 'axios';
+
 import Footer from './component/Footer/Footer';
 import CocktailList from './component/CocktailList/CocktailList';
 import Header from './component/Header/Header';
@@ -17,17 +19,26 @@ function App() {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    'abcdefghijklmnopqrstuvwxyz0123456789'.split('').forEach((letter) => {
-      fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
-        .then((response) => response.json())
-        .then((data) => data.drinks && setCocktailList(
-          (previousValue) => [...previousValue, ...data.drinks],
-        ));
+    Promise.all(
+      'abcdefghijklmnopqrstuvwxyz0123456789'.split('').map((letter) => (
+        axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`)
+      )),
+    ).then((responses) => {
+      setCocktailList(
+        responses.reduce((acc, response) => {
+          if (response.data.drinks == null) {
+            return acc;
+          }
+          return [
+            ...acc,
+            ...response.data.drinks.sort((a, b) => a.strDrink.localeCompare(b.strDrink)),
+          ];
+        }, []),
+      );
     });
   }, []);
   return (
     <BrowserRouter>
-      <Navigation />
       <Header />
       <Route path="/" exact>
         <SearchBar getQuery={(q) => setQuery(q)} />
@@ -43,7 +54,7 @@ function App() {
         <button type="button" onClick={() => setPage(page + 1)}>Page suivante</button>
       </Route>
       <Route path="/the-classics" exact component={TheClassics} />
-      <Route path="/create" exact component={CreateCocktail}>
+      <Route path="/create" exact>
         <CreateCocktail cocktails={cocktailList} />
       </Route>
       <Route path="/cocktail-of-the-day" exact>

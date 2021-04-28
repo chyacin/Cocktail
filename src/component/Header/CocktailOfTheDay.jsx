@@ -15,15 +15,7 @@ function CocktailOfTheDay({ cocktails }) {
     <div className="contenu">
       { randomCocktail && (
         <Cocktail
-          name={randomCocktail.strDrink}
-          image={randomCocktail.strDrinkThumb}
-          ingredient1={randomCocktail.strIngredient1}
-          ingredient2={randomCocktail.strIngredient2}
-          ingredient3={randomCocktail.strIngredient3}
-          ingredient4={randomCocktail.strIngredient4}
-          ingredient5={randomCocktail.strIngredient5}
-          ingredient6={randomCocktail.strIngredient6}
-          instruction={randomCocktail.strInstructions}
+          data={randomCocktail}
         />
       )}
       <BiDrink size={30} className="button" p onClick={() => generateRandomCocktail()} type="button" style={{ backgroundColor: 'transparent' }} />

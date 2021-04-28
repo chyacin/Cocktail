@@ -4,29 +4,28 @@ import PropTypes from 'prop-types';
 import Modal from './Modal';
 import IngredientList from './IngredientList';
 
-function Cocktail({
-  image, name, ingredient1, ingredient2, ingredient3,
-  ingredient4, ingredient5, ingredient6, instruction,
-}) {
+function Cocktail({ data }) {
   return (
     <div className="cards">
       <div className="card">
         <div className="card-header">
-          <img className="card-img" src={image} alt="illustration" />
+          <img className="card-img" src={data.strDrinkThumb} alt="illustration" />
           <div className="card-body">
-            <h2 className="card-title">{name}</h2>
+            <h2 className="card-title">{data.strDrink}</h2>
             <Modal>
-              <h2 className="card-title">{name}</h2>
-              <img className="modal-img" src={image} alt="illustration" />
-              <IngredientList
-                ingredient1={ingredient1}
-                ingredient2={ingredient2}
-                ingredient3={ingredient3}
-                ingredient4={ingredient4}
-                ingredient5={ingredient5}
-                ingredient6={ingredient6}
-                instruction={instruction}
-              />
+              <>
+                <h2 className="card-title">{data.strDrink}</h2>
+                <img className="modal-img" src={data.strDrinkThumb} alt="illustration" />
+                <IngredientList
+                  ingredient1={data.strIngredient1}
+                  ingredient2={data.strIngredient2}
+                  ingredient3={data.strIngredient3}
+                  ingredient4={data.strIngredient4}
+                  ingredient5={data.strIngredient5}
+                  ingredient6={data.strIngredient6}
+                  instructions={data.strInstructions}
+                />
+              </>
             </Modal>
           </div>
         </div>
@@ -35,15 +34,17 @@ function Cocktail({
   );
 }
 Cocktail.propTypes = {
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
-  ingredient1: PropTypes.string.isRequired,
-  ingredient2: PropTypes.string.isRequired,
-  ingredient3: PropTypes.string.isRequired,
-  ingredient4: PropTypes.string.isRequired,
-  ingredient5: PropTypes.string.isRequired,
-  ingredient6: PropTypes.string.isRequired,
-  instruction: PropTypes.string.isRequired,
+  data: PropTypes.shape({
+    strDrink: PropTypes.string.isRequired,
+    strDrinkThumb: PropTypes.string.isRequired,
+    strIngredient1: PropTypes.string,
+    strIngredient2: PropTypes.string,
+    strIngredient3: PropTypes.string,
+    strIngredient4: PropTypes.string,
+    strIngredient5: PropTypes.string,
+    strIngredient6: PropTypes.string,
+    strInstructions: PropTypes.string,
+  }).isRequired,
 };
 
 export default Cocktail;

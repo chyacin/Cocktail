@@ -8,6 +8,7 @@ function CreateCocktail({ cocktails }) {
     console.log(ingredient);
   };
   useEffect(() => {
+    // alert(`ingredients should be updated from ${cocktails.length} cocktails`);
     setIngredients((previousIngredientList) => {
       const allIngredients = cocktails.reduce((updatedIngredientList, cocktail) => {
         for (let i = 1; i <= 7; i += 1) {
