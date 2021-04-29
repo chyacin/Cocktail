@@ -1,5 +1,21 @@
-.glass {
-    color: #f1356d;
-    font-size: 3vh;
-    font-style: italic;
+.drink {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 8%;
+    left: 83%;
+}
+
+.drink:hover {
+    color: #b62456;
+}
+
+.fav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.drinking {
+    position: relative;
 }
