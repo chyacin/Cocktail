@@ -3,12 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from './Modal';
 import IngredientList from './IngredientList';
+import FavoriteButton from '../Header/FavoriteButton';
 
 function Cocktail({ data }) {
   return (
     <div className="cards">
       <div className="card">
         <div className="card-header">
+          <FavoriteButton cocktail={data} />
           <img className="card-img" src={data.strDrinkThumb} alt="illustration" />
           <div className="card-body">
             <h2 className="card-title">{data.strDrink}</h2>

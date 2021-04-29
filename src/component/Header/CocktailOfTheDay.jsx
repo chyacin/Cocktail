@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { BiDrink } from 'react-icons/bi';
 import Cocktail from '../CocktailList/Cocktail';
@@ -11,17 +11,22 @@ function CocktailOfTheDay({ cocktails }) {
     const cocktailIndex = Math.floor(Math.random() * cocktails.length);
     setRandomCocktail(cocktails[cocktailIndex]);
   };
+
+  useEffect(() => {
+    if (randomCocktail == null && cocktails.length >= 1) {
+      generateRandomCocktail();
+    }
+  }, [cocktails]);
   return (
     <div className="contenu">
       { randomCocktail && (
-        <Cocktail
-          data={randomCocktail}
-        />
+        <div className="drinking">
+          <Cocktail data={randomCocktail} />
+          <div className="drink">
+            <BiDrink size={20} className="button" p onClick={() => generateRandomCocktail()} type="button" />
+          </div>
+        </div>
       )}
-      <BiDrink size={30} className="button" p onClick={() => generateRandomCocktail()} type="button" style={{ backgroundColor: 'transparent' }} />
-      <p className="glass">
-        Click on the cocktail glass
-      </p>
     </div>
   );
 }

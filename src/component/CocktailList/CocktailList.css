@@ -1,42 +1,42 @@
-
-  .cards {
+.cards {
     margin-top: 10px;
     align-items: center;
     flex-wrap: wrap;
-    display:inline-flex;
-    justify-content: center; 
-  }
-  
-  .card {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.card {
     border-radius: 10px;
     width: 200px;
     margin: 20px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     background-color: whitesmoke;
     border: 3px solid #FFF;
-    height: 321px;
-  }
+    height: 335px;
+}
 
-  .card-img {
+.card-img {
     border-radius: 10px 10px 0 0;
     height: 200px;
     width: 100%;
-  }
+}
 
-  .card-body {
-    padding: 6px 20px; 
-  }
-  
-  .card-body h2 {
+.card-body {
+    padding: 6px 20px;
+}
+
+.card-body h2 {
     margin-bottom: 8px;
     font-size: 1.7em;
     height: 45px;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  .card-button {
+}
+
+.card-button {
     border: none;
     border-radius: 10px;
     height: 50px;
@@ -46,13 +46,15 @@
     color: whitesmoke;
     font-size: 18px;
     cursor: pointer;
-  }
-  .contenu {
+}
+
+.contenu {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  .modalButton {
+}
+
+.modalButton {
     display: flex;
     margin: auto;
     padding: 0.3vh 5vh;
@@ -61,51 +63,59 @@
     color: white;
     font-size: 2vh;
     border-radius: 10px;
-  }
-  .modalButton:hover {
+}
+
+.modalButton:hover {
     color: #b62456;
-  }
-  .modal {
-    background: rgba(0,0,0,0.5);
+}
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     text-align: center;
-  }
-  .modal-content{
+}
+
+.modal-content {
     height: auto;
     width: 700px;
     background: #101728;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: white;
     border: 2px solid lightgrey;
     border-radius: 2%;
-  }
-  .modal-img {
+}
+
+.modal-img {
     height: 150px;
     width: 150px;
     border: 3px solid #1f8187;
-  }
-  .card-button {
+}
+
+.card-button {
     width: 10vh;
     margin-bottom: 1vh;
-  }
-  .ingredient p {
+}
+
+.ingredient p {
     font-size: 2vh;
-  }
-  .instructions{
+}
+
+.instructions {
     border-top: 2px solid lightgrey;
     font-size: 1.8vh;
     padding: 2vh 0;
     font-style: italic;
     max-height: 200px;
-    overflow-y: auto; 
-  }
-  strong {
+    overflow-y: auto;
+}
+
+strong {
     margin-left: 2vh;
-  }
+}
