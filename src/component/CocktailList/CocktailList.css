@@ -15,6 +15,7 @@
     flex-direction: column; 
     background-color: whitesmoke;
     border: 3px solid #FFF;
+    height: 321px;
   }
 
   .card-img {
@@ -24,12 +25,16 @@
   }
 
   .card-body {
-    padding: 10px 20px; 
+    padding: 6px 20px; 
   }
   
   .card-body h2 {
-    margin-bottom: 15px;
-    font-size: 17px;;
+    margin-bottom: 8px;
+    font-size: 1.7em;
+    height: 45px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .card-button {
     border: none;
@@ -84,7 +89,7 @@
   .modal-img {
     height: 150px;
     width: 150px;
-    border: 3px solid #1f8187;;
+    border: 3px solid #1f8187;
   }
   .card-button {
     width: 10vh;
@@ -98,6 +103,8 @@
     font-size: 1.8vh;
     padding: 2vh 0;
     font-style: italic;
+    max-height: 200px;
+    overflow-y: auto; 
   }
   strong {
     margin-left: 2vh;
