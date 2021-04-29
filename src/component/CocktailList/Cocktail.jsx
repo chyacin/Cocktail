@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import Modal from './Modal';
 import IngredientList from './IngredientList';
 
-
 function Cocktail({ data }) {
-
   return (
     <div className="cards">
       <div className="card">

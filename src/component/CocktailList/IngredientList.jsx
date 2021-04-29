@@ -34,7 +34,6 @@ IngredientList.defaultProps = {
   ingredient5: null,
   ingredient6: null,
   instructions: null,
-
 };
 
 export default IngredientList;
