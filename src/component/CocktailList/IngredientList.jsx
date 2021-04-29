@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function IngredientList({
+
   ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, instructions,
 }) {
   return (
@@ -16,7 +17,6 @@ function IngredientList({
     </div>
   );
 }
-
 IngredientList.propTypes = {
   ingredient1: PropTypes.string,
   ingredient2: PropTypes.string,
@@ -34,6 +34,7 @@ IngredientList.defaultProps = {
   ingredient5: null,
   ingredient6: null,
   instructions: null,
+
 };
 
 export default IngredientList;

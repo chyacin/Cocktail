@@ -142,34 +142,9 @@ h1:focus {
     border-color: grey;
     padding-top: 7vh;
 }
-
-.links li {
-    list-style: none;
-    padding-left: 10vh;
-}
-
-.navbar .links {
-    margin-left: auto;
-}
-
-.navbar button {
-    margin-left: 16px;
-    text-decoration: none;
-    padding: 6px;
-    background-color: #101728;
-    border: 2px solid #1f8187;
-    color: white;
-    font-size: 2vh;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #1f8187;
-}
-
-.navbar button:hover {
-    color: #b62456;
-}
 .navlist .link {
     display: inline-flex;
-    margin-left: 11vh;
+    margin-left: 17vh;
     padding: 6px;
     max-width: 18vh;
     background-color: #101728;
@@ -181,6 +156,9 @@ h1:focus {
 }
 .navlist {
     padding-top: 7.5vh;
+}
+.navlist .link:hover {
+    color: #b62456;
 }
 }
 

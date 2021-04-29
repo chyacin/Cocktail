@@ -7,7 +7,6 @@ import axios from 'axios';
 import Footer from './component/Footer/Footer';
 import CocktailList from './component/CocktailList/CocktailList';
 import Header from './component/Header/Header';
-import TheClassics from './component/Header/TheClassics';
 import CreateCocktail from './component/Header/CreateCocktail';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
 import Favorites from './component/Header/Favorites';
@@ -47,14 +46,15 @@ function App() {
             cocktail.strDrink.toLowerCase().includes(query.toLowerCase())
           ),
         ).slice(
-          (page - 1) * 10, page * 10,
+          (page - 1) * 14, page * 14,
         )}
         />
-        {page > 1 ? <button type="button" onClick={() => setPage(page - 1)}>Page précédente</button> : ''}
-        <button type="button" onClick={() => setPage(page + 1)}>Page suivante</button>
+        <div className="pagination">
+          {page > 1 ? <button className="pagebutton" type="button" onClick={() => setPage(page - 1)}>Page précédente</button> : ''}
+          <button className="pagebutton" type="button" onClick={() => setPage(page + 1)}>Page suivante</button>
+        </div>
       </Route>
-      <Route path="/the-classics" exact component={TheClassics} />
-      <Route path="/create" exact>
+      <Route path="/create" exact component={CreateCocktail}>
         <CreateCocktail cocktails={cocktailList} />
       </Route>
       <Route path="/cocktail-of-the-day" exact>

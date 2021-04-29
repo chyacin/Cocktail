@@ -4,7 +4,7 @@ import IngredientsFilter from './IngredientsFilter';
 
 function CreateCocktail({ cocktails }) {
   const [ingredients, setIngredients] = useState([]);
-  const CreateList2 = (ingredient) => {
+  const CreateList = (ingredient) => {
     console.log(ingredient);
   };
   useEffect(() => {
@@ -29,7 +29,7 @@ function CreateCocktail({ cocktails }) {
 
   return (
     <div className="strIngredient">
-      <IngredientsFilter ingredients={ingredients} CreateList2={CreateList2} />
+      <IngredientsFilter ingredients={ingredients} CreateList={CreateList} />
     </div>
   );
 }

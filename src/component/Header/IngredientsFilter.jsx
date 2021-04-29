@@ -1,10 +1,9 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IngredientsFilter = ({ ingredients, CreateList2 }) => (
+const IngredientsFilter = ({ ingredients, CreateList }) => (
   <>
-    <select className="contenu" onChange={(e) => CreateList2(e.target.value)}>
+    <select className="contenu" onChange={(e) => CreateList(e.target.value)}>
       <option>Select Ingredient</option>
       { ingredients.map((ingredient) => (
         <option key={ingredient}>{ingredient}</option>
@@ -21,6 +20,6 @@ const IngredientsFilter = ({ ingredients, CreateList2 }) => (
 
 IngredientsFilter.propTypes = {
   ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-  CreateList2: PropTypes.arrayOf(PropTypes.string).isRequired,
+  CreateList: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default IngredientsFilter;
