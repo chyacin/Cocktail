@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { GrAddCircle } from 'react-icons/gr';
+import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 
 function FavoriteButton({ cocktail }) {
   const [favorites, setFavorites] = useState([]);
@@ -21,11 +21,30 @@ function FavoriteButton({ cocktail }) {
     saveToLocalStorage(newFavoriteList);
   };
 
+  const removeFavoriteCocktail = () => {
+    const newFavoriteList = favorites.filter(
+      (favorite) => favorite.idDrink !== cocktail.idDrink,
+    );
+
+    setFavorites(newFavoriteList);
+    saveToLocalStorage(newFavoriteList);
+  };
+
   return (
-    <GrAddCircle
-      size={15}
-      onClick={() => addFavoriteCocktail()}
-    />
+    <div>
+      {favorites.findIndex((onlyFavs) => (onlyFavs.idDrink === cocktail.idDrink)) === -1 ? (
+        <IoIosHeartEmpty
+          size={15}
+          onClick={() => addFavoriteCocktail()}
+        />
+      ) : (
+        <IoIosHeart
+          size={15}
+          onClick={() => removeFavoriteCocktail()}
+        />
+      )}
+      ;
+    </div>
   );
 }
 FavoriteButton.propTypes = {
