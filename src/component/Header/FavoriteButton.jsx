@@ -48,7 +48,9 @@ function FavoriteButton({ cocktail }) {
   );
 }
 FavoriteButton.propTypes = {
-  cocktail: PropTypes.func.isRequired,
+  cocktail: PropTypes.PropTypes.shape({
+    idDrink: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default FavoriteButton;

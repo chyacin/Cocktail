@@ -1,25 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Cocktail from './Cocktail';
-import SearchBar from '../SearchBar/SearchBar';
 
 const CocktailList = ({ cocktails }) => {
-  const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     setPage(1);
-  }, [query]);
+  }, [cocktails]);
 
   return (
     <>
-      <SearchBar getQuery={(q) => setQuery(q)} />
       <div className="contenu">
-        { cocktails.filter(
-          (cocktail) => (
-            cocktail.strDrink.toLowerCase().includes(query.toLowerCase())
-          ),
-        ).slice(
+        { cocktails.slice(
           (page - 1) * 14, page * 14,
         ).map((cocktail) => (
           <Cocktail
