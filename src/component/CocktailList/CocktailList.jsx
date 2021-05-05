@@ -22,8 +22,28 @@ const CocktailList = ({ cocktails }) => {
         ))}
       </div>
       <div className="pagination">
-        {page > 1 ? <button className="pagebutton" type="button" onClick={() => setPage(page - 1)}>Page précédente</button> : ''}
-        <button className="pagebutton" type="button" onClick={() => setPage(page + 1)}>Page suivante</button>
+        {
+          (page > 1) && (
+            <button
+              className="pagebutton"
+              type="button"
+              onClick={() => setPage(page - 1)}
+            >
+              Page précédente
+            </button>
+          )
+        }
+        {
+          (page * 14 < cocktails.length) && (
+            <button
+              className="pagebutton"
+              type="button"
+              onClick={() => setPage(page + 1)}
+            >
+              Page suivante
+            </button>
+          )
+        }
       </div>
     </>
   );
