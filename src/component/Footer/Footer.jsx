@@ -18,7 +18,7 @@ const Footer = () => {
             </a>
             <a className="icon" href="https://www.linkedin.com/in/bastien-le-brun-3417b4137/">
               <p className="fa-fa-linkedin">
-                Bastian Le Brun
+                Bastien Le Brun
               </p>
             </a>
             <a className="icon" href="https://www.linkedin.com/in/calvinhyacinthmsc/">

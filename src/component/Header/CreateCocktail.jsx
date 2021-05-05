@@ -3,28 +3,66 @@ import PropTypes from 'prop-types';
 import IngredientsFilter from './IngredientsFilter';
 import CocktailList from '../CocktailList/CocktailList';
 
+const generateIngredientList = (cocktails) => {
+  const ingredientList = cocktails.reduce((updatedIngredientList, cocktail) => {
+    const mergedArray = [...updatedIngredientList, ...cocktail.strIngredients];
+    const setWithoutDuplicates = new Set(mergedArray);
+    const setAsArray = [...setWithoutDuplicates];
+    return setAsArray;
+  }, []);
+  return ingredientList.sort();
+};
+
 function CreateCocktail({ cocktails }) {
   const [ingredients, setIngredients] = useState([]);
-  const [firstSelectedIngredient, setFirstSelectedIngredient] = useState();
+  const [refinedIngredients, setRefinedIngredients] = useState([]);
+  const [firstSelectedIngredient, setFirstSelectedIngredient] = useState('');
+  const [secondSelectedIngredient, setSecondSelectedIngredient] = useState('');
+
   useEffect(() => {
-    const allIngredients = cocktails.reduce((updatedIngredientList, cocktail) => {
-      const mergedArray = [...updatedIngredientList, ...cocktail.strIngredients];
-      const setWithoutDuplicates = new Set(mergedArray);
-      const setAsArray = [...setWithoutDuplicates];
-      return setAsArray;
-    }, []);
-    allIngredients.sort();
+    const allIngredients = generateIngredientList(cocktails);
     setIngredients(allIngredients);
+    setRefinedIngredients(allIngredients);
+    setFirstSelectedIngredient('');
+    setSecondSelectedIngredient('');
   }, [cocktails]);
+  useEffect(() => {
+    const allIngredients = generateIngredientList(
+      cocktails.filter((cocktail) => (
+        firstSelectedIngredient === ''
+        || cocktail.strIngredients.includes(firstSelectedIngredient)
+      )),
+    );
+    setRefinedIngredients(
+      allIngredients.filter((ingredient) => ingredient !== firstSelectedIngredient),
+    );
+    setSecondSelectedIngredient('');
+  }, [firstSelectedIngredient]);
   return (
     <div className="strIngredient">
+      {firstSelectedIngredient}
+      {secondSelectedIngredient}
       <IngredientsFilter
         ingredients={ingredients}
-        setFirstSelectedIngredient={setFirstSelectedIngredient}
+        selectedIngredient={firstSelectedIngredient}
+        setSelectedIngredient={setFirstSelectedIngredient}
       />
-      <CocktailList cocktails={cocktails.filter((cocktail) => (
-        cocktail.strIngredients.includes(firstSelectedIngredient)
-      ))}
+      <IngredientsFilter
+        ingredients={refinedIngredients}
+        selectedIngredient={secondSelectedIngredient}
+        setSelectedIngredient={setSecondSelectedIngredient}
+      />
+      <CocktailList
+        cocktails={cocktails.filter((cocktail) => (
+          (
+            firstSelectedIngredient === ''
+            || cocktail.strIngredients.includes(firstSelectedIngredient)
+          )
+          && (
+            secondSelectedIngredient === ''
+            || cocktail.strIngredients.includes(secondSelectedIngredient)
+          )
+        ))}
       />
     </div>
   );
