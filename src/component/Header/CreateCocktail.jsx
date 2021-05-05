@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import IngredientsFilter from './IngredientsFilter';
+import CocktailList from '../CocktailList/CocktailList';
 
 function CreateCocktail({ cocktails }) {
   const [ingredients, setIngredients] = useState([]);
-  const createList = (ingredient) => {
-    console.log(ingredient);
-  };
+  const [firstSelectedIngredient, setFirstSelectedIngredient] = useState();
   useEffect(() => {
     const allIngredients = cocktails.reduce((updatedIngredientList, cocktail) => {
-      for (let i = 1; i <= 7; i += 1) {
-        let ingredient = cocktail[`strIngredient${i}`];
-        if (ingredient != null) {
-          ingredient = ingredient.toLowerCase();
-        }
-        if (ingredient != null && ingredient !== '' && !updatedIngredientList.includes(ingredient)) {
-          updatedIngredientList.push(ingredient);
-        }
-      }
-      return updatedIngredientList;
+      const mergedArray = [...updatedIngredientList, ...cocktail.strIngredients];
+      const setWithoutDuplicates = new Set(mergedArray);
+      const setAsArray = [...setWithoutDuplicates];
+      return setAsArray;
     }, []);
     allIngredients.sort();
     setIngredients(allIngredients);
@@ -27,7 +20,11 @@ function CreateCocktail({ cocktails }) {
     <div className="strIngredient">
       <IngredientsFilter
         ingredients={ingredients}
-        createList={createList}
+        setFirstSelectedIngredient={setFirstSelectedIngredient}
+      />
+      <CocktailList cocktails={cocktails.filter((cocktail) => (
+        cocktail.strIngredients.includes(firstSelectedIngredient)
+      ))}
       />
     </div>
   );
