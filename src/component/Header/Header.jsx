@@ -5,22 +5,34 @@ import headerLogo from './headerLogo.png';
 
 const Header = () => (
   <header className="header">
-    <img className="codeTailsImg" src={headerLogo} alt="logo" />
-    <h1 contentEditable spellCheck="false">WELCOME</h1>
-    <nav className="navlist">
-      <Link className="link" to="/">
-        Home Page
-      </Link>
-      <Link className="link" to="/create">
-        Create Cocktail
-      </Link>
-      <Link className="link" to="/cocktail-of-the-day">
-        Cocktail of the day
-      </Link>
-      <Link className="link" to="/favorites">
-        Favorites
-      </Link>
-    </nav>
+    <div className="gridstyle">
+      <img className="codeTailsImg" src={headerLogo} alt="logo" />
+      <h1>WELCOME TO WILD CODE&apos;TAILS</h1>
+    </div>
+    <div className="thefourth">
+      <nav className="navlist">
+        <div>
+          <Link className="link" to="/">
+            Home Page
+          </Link>
+        </div>
+        <div>
+          <Link className="link" to="/create">
+            Create Cocktail
+          </Link>
+        </div>
+        <div>
+          <Link className="link" to="/cocktail-of-the-day">
+            Cocktail of the day
+          </Link>
+        </div>
+        <div>
+          <Link className="link" to="/favorites">
+            Favorites
+          </Link>
+        </div>
+      </nav>
+    </div>
   </header>
 );
 
