@@ -18,7 +18,7 @@ function CocktailOfTheDay({ cocktails }) {
     }
   }, [cocktails]);
   return (
-    <div className="contenu">
+    <div className="dayscocktail">
       { randomCocktail && (
         <div className="drinking">
           <Cocktail data={randomCocktail} />

@@ -11,26 +11,22 @@ const Header = () => (
     </div>
     <div className="thefourth">
       <nav className="navlist">
-        <div>
-          <Link className="link" to="/">
-            Home Page
-          </Link>
-        </div>
-        <div>
-          <Link className="link" to="/create">
-            Create Cocktail
-          </Link>
-        </div>
-        <div>
-          <Link className="link" to="/cocktail-of-the-day">
-            Cocktail of the day
-          </Link>
-        </div>
-        <div>
-          <Link className="link" to="/favorites">
-            Favorites
-          </Link>
-        </div>
+
+        <Link className="link" to="/">
+          Search
+        </Link>
+
+        <Link className="link" to="/create">
+          Create
+        </Link>
+
+        <Link className="link" to="/cocktail-of-the-day">
+          Try me !
+        </Link>
+
+        <Link className="link" to="/favorites">
+          Favorites
+        </Link>
       </nav>
     </div>
   </header>

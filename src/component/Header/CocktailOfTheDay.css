@@ -21,6 +21,13 @@
     .drinking {
         position: relative;
     }
+    .card {
+        height: auto;
+    }
+    .modalButton{
+        display: flex;
+        margin: 1vh auto;
+    }
 }
 /* IPAD */
 @media screen and (min-width: 768px) and (max-width: 1023px){
@@ -44,7 +51,18 @@
     
     .drinking {
         position: relative;
-    }    
+    }  
+    .card {
+        height: auto;
+    }
+    .modalButton{
+        display: flex;
+        margin: 1vh auto;
+    }
+    .dayscocktail {
+        display: flex;
+        justify-content: center;
+    }
 }
 /* DESKTOP */
 @media screen and (min-width: 1024px) {

@@ -9,7 +9,7 @@ function IngredientsFilter({
   return (
     <>
       <select
-        className="contenu"
+        className="filter"
         onChange={(e) => {
           setSelectedIngredient(e.target.value);
         }}
