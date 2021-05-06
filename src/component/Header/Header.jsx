@@ -1,6 +1,6 @@
 import './Header.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import headerLogo from './headerLogo.png';
 
 const Header = () => (
@@ -11,26 +11,23 @@ const Header = () => (
     </div>
     <div className="thefourth">
       <nav className="navlist">
-        <div>
-          <Link className="link" to="/">
-            Home Page
-          </Link>
-        </div>
-        <div>
-          <Link className="link" to="/create">
-            Create Cocktail
-          </Link>
-        </div>
-        <div>
-          <Link className="link" to="/cocktail-of-the-day">
-            Cocktail of the day
-          </Link>
-        </div>
-        <div>
-          <Link className="link" to="/favorites">
-            Favorites
-          </Link>
-        </div>
+
+        <NavLink className="link" activeClassName="active" exact to="/">
+          Search
+        </NavLink>
+
+        <NavLink className="link" activeClassName="active" exact to="/create">
+          Create
+        </NavLink>
+
+        <NavLink className="link" activeClassName="active" exact to="/cocktail-of-the-day">
+          Cocktail of the day
+        </NavLink>
+
+        <NavLink className="link" activeClassName="active" exact to="/favorites">
+          Favorites
+        </NavLink>
+
       </nav>
     </div>
   </header>

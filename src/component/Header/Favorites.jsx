@@ -12,8 +12,7 @@ function Favorites() {
   }, []);
   return (
     <div className="myFavorites">
-      <h1>My Favorites</h1>
-      <div>
+      <div className="favoriteCocktail">
         {favorites.map((drink) => (
           <Cocktail
             data={drink}
