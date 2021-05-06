@@ -1,5 +1,29 @@
-.searchBar {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 2vh 2vh 0 0;
+/* MOBILE */
+@media screen and (max-width:767px) {
+    .searchBar {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+}
+
+/* IPAD */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .searchBar {
+        display: flex;
+        justify-content: center;
+        margin-top: 2vh;
+    }
+    input{
+        font-size: 1.5vh;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .searchBar {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 2vh 2vh 0 0;
+    }
 }

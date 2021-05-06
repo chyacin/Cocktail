@@ -1,3 +1,5 @@
+/* MOBILE */
+@media screen and (max-width:767px) {
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 .footer {
     background: white;
@@ -10,40 +12,15 @@
     padding-top: 1vh;
 }
 
-.column h1 {
-    display: inline;
-    color: #f1356d;
-    font-size: 20px;
-    font-weight: bold;
-}
-
 a:link {
     text-decoration: none;
 }
-
-h5 {
-    font-size: small;
-    display: inline;
-}
-
-.column {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .column h1 {
-    color: #FFF;
-    display: flex;
-    margin: auto;
-}
-
-.row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
     text-align: center;
+    color: #FFF;
+}
+.row {
+    align-items: center;
 }
 
 .footer h1:hover {
@@ -52,19 +29,122 @@ h5 {
 
 .icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .column p {
     color: darkgrey;
-    font-size: 2vh;
+    font-size: 1.5vh;
     font-style: italic;
 }
-
-.column p:hover {
-    color: #b62456;
 }
-
-.icons .fa-fa-linkedin {
-    padding-left: 5vh;
+/* IPAD */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    .footer {
+        background: white;
+        flex-direction: column;
+        background-image: url("footerimg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 3px solid #d4d519;
+        width: 100%;
+        padding-top: 1vh;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    .column h1 {
+        text-align: center;
+        color: #FFF;
+    }
+    .row {
+        align-items: center;
+    }
+    
+    .footer h1:hover {
+        color: #f1356d;
+    }
+    
+    .icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .column p {
+        color: darkgrey;
+        font-size: 1.5vh;
+        font-style: italic;
+    }
+}
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+    .footer {
+        background: white;
+        flex-direction: column;
+        background-image: url("footerimg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 3px solid #d4d519;
+        width: 100%;
+        padding-top: 1vh;
+    }
+    
+    .column h1 {
+        display: inline;
+        color: #f1356d;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    a:link {
+        text-decoration: none;
+    }
+    
+    h5 {
+        font-size: small;
+        display: inline;
+    }
+    
+    .column {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .column h1 {
+        color: #FFF;
+        display: flex;
+        margin: auto;
+    }
+    
+    .row {
+        align-items: center;
+    }
+    
+    .footer h1:hover {
+        color: #f1356d;
+    }
+    
+    .icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .column p {
+        color: darkgrey;
+        font-size: 2vh;
+        font-style: italic;
+    }
+    
+    .column p:hover {
+        color: #b62456;
+    }
+    
+    .icons .fa-fa-linkedin {
+        padding-left: 5vh;
+    }
 }

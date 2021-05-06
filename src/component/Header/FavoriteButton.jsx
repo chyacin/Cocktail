@@ -43,7 +43,6 @@ function FavoriteButton({ cocktail }) {
           onClick={() => removeFavoriteCocktail()}
         />
       )}
-      ;
     </div>
   );
 }

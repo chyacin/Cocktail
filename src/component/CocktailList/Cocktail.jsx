@@ -11,7 +11,9 @@ function Cocktail({ data }) {
       <div className="card">
         <div className="card-header">
           <FavoriteButton cocktail={data} />
-          <img className="card-img" src={data.strDrinkThumb} alt="illustration" />
+          <div className="zoom">
+            <img className="card-img" src={data.strDrinkThumb} alt="illustration" />
+          </div>
           <div className="card-body">
             <h2 className="card-title">{data.strDrink}</h2>
             <Modal>
