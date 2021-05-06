@@ -2,15 +2,26 @@
 @media screen and (max-width:767px) {
     .drink {
         background-color: transparent;
+        color: #d4d519;
         display: flex;
         justify-content: flex-end;
         position: absolute;
-        top: 8%;
-        left: 83%;
+        top: 42%;
+        left: 118%;
+    }
+
+    .text{
+        position: absolute;
+        color: #d4d519;
+        left: 20%;
+        top: -20%;
+        font-weight: 800;
+    }
+
+    .drink:hover {
+        color: #f6fa06;
     }
     
-    .drink:hover {
-        color: #b62456;
     }
     
     .fav {
@@ -21,20 +32,31 @@
     .drinking {
         position: relative;
     }
-}
+
 /* IPAD */
 @media screen and (min-width: 768px) and (max-width: 1023px){
     .drink {
         background-color: transparent;
+        color: #d4d519;
         display: flex;
         justify-content: flex-end;
         position: absolute;
-        top: 8%;
-        left: 83%;
+        top: 42%;
+        left: 118%;
+    }
+
+    .text{
+        position: absolute;
+        color: #d4d519;
+        left: 20%;
+        top: -20%;
+        font-weight: 800;
+    }
+
+    .drink:hover {
+        color: #f6fa06;
     }
     
-    .drink:hover {
-        color: #b62456;
     }
     
     .fav {
@@ -45,20 +67,29 @@
     .drinking {
         position: relative;
     }    
-}
+
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .drink {
         background-color: transparent;
+        color: #d4d519;
         display: flex;
         justify-content: flex-end;
         position: absolute;
-        top: 8%;
-        left: 83%;
+        top: 42%;
+        left: 118%;
     }
-    
+
+    .text{
+        position: absolute;
+        color: #d4d519;
+        left: 20%;
+        top: -20%;
+        font-weight: 800;
+    }
+
     .drink:hover {
-        color: #b62456;
+        color: #f6fa06;
     }
     
     .fav {

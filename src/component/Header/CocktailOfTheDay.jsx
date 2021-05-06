@@ -27,7 +27,12 @@ function CocktailOfTheDay({ cocktails, favorites, setFavorites }) {
             setFavorites={setFavorites}
           />
           <div className="drink">
-            <BiDrink size={20} className="button" p onClick={() => generateRandomCocktail()} type="button" />
+            <BiDrink size={70} className="button" p onClick={() => generateRandomCocktail()} type="button" />
+            <div className="text">
+              <text>
+                <p>CHANGE</p>
+              </text>
+            </div>
           </div>
         </div>
       )}
