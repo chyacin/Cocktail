@@ -6,8 +6,7 @@ import Cocktail from '../CocktailList/Cocktail';
 function Favorites({ favorites, setFavorites }) {
   return (
     <div className="myFavorites">
-      <h1>My Favorites</h1>
-      <div>
+      <div className="favoriteCocktail">
         {favorites.map((drink) => (
           <Cocktail
             data={drink}

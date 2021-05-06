@@ -1,6 +1,6 @@
 import './Header.css';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import headerLogo from './headerLogo.png';
 
 const Header = () => (
@@ -12,21 +12,21 @@ const Header = () => (
     <div className="thefourth">
       <nav className="navlist">
 
-        <Link className="link" to="/">
+        <NavLink className="link" activeClassName="active" exact to="/">
           Search
-        </Link>
+        </NavLink>
 
-        <Link className="link" to="/create">
+        <NavLink className="link" activeClassName="active" exact to="/create">
           Create
-        </Link>
+        </NavLink>
 
-        <Link className="link" to="/cocktail-of-the-day">
-          Try me !
-        </Link>
+        <NavLink className="link" activeClassName="active" exact to="/cocktail-of-the-day">
+          Cocktail of the day
+        </NavLink>
 
-        <Link className="link" to="/favorites">
+        <NavLink className="link" activeClassName="active" exact to="/favorites">
           Favorites
-        </Link>
+        </NavLink>
       </nav>
     </div>
   </header>
