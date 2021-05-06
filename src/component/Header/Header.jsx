@@ -27,7 +27,6 @@ const Header = () => (
         <NavLink className="link" activeClassName="active" exact to="/favorites">
           Favorites
         </NavLink>
-
       </nav>
     </div>
   </header>
