@@ -13,7 +13,7 @@ const generateIngredientList = (cocktails) => {
   return ingredientList.sort();
 };
 
-function CreateCocktail({ cocktails }) {
+function CreateCocktail({ cocktails, favorites, setFavorites }) {
   const [ingredients, setIngredients] = useState([]);
   const [refinedIngredients, setRefinedIngredients] = useState([]);
   const [firstSelectedIngredient, setFirstSelectedIngredient] = useState('');
@@ -63,11 +63,15 @@ function CreateCocktail({ cocktails }) {
             || cocktail.strIngredients.includes(secondSelectedIngredient)
           )
         ))}
+        favorites={favorites}
+        setFavorites={setFavorites}
       />
     </div>
   );
 }
 CreateCocktail.propTypes = {
   cocktails: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
 };
 export default CreateCocktail;

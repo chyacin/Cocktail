@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './Favorites.css';
+import PropTypes from 'prop-types';
 import Cocktail from '../CocktailList/Cocktail';
 
-function Favorites() {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    const cocktailFavorites = JSON.parse(localStorage.getItem('favorite-cocktails') || '[]');
-
-    setFavorites(cocktailFavorites);
-  }, []);
+function Favorites({ favorites, setFavorites }) {
   return (
     <div className="myFavorites">
       <h1>My Favorites</h1>
@@ -18,10 +12,16 @@ function Favorites() {
           <Cocktail
             data={drink}
             key={drink.idDrink}
+            favorites={favorites}
+            setFavorites={setFavorites}
           />
         ))}
       </div>
     </div>
   );
 }
+Favorites.propTypes = {
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
+};
 export default Favorites;

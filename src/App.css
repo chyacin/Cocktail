@@ -26,6 +26,32 @@
     color: white;
   }
   
+  .dropdown {
+    width: 300px;
+    margin:auto;
+    display: flex;
+  }
+
+  .select {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    cursor: pointer;
+    margin: 7px;
+    padding: 0.6vh 4vh;
+    background-color: #101728;
+    box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem var(--neon-border-color),
+                inset 0 0 2rem var(--neon-border-color),
+                0 0 4rem var(--neon-border-color),
+                inset 0 0 4rem var(--neon-border-color); 
+    color: white;
+  }
+
   .App-link {
     color: #61dafb;
   }
@@ -52,12 +78,19 @@
   }
   .pagination .pagebutton {
     margin: 1.5vh 0.5vh;
-    padding: 0.3vh 2vh;
+    padding: 0.9vh 6vh;
     background-color: #101728;
-    border: 2px solid #1f8187;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
     color: white;
     font-size: 1.5vh;
     border-radius: 10px;
+    cursor: pointer;
   }
   .pagebutton:hover {
     color: #b62456;
@@ -92,6 +125,32 @@
     color: white;
   }
   
+  .dropdown {
+    width: 300px;
+    margin:auto;
+    display: flex;
+  }
+
+  .select {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    cursor: pointer;
+    margin: 7px;
+    padding: 0.6vh 4vh;
+    background-color: #101728;
+    box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem var(--neon-border-color),
+                inset 0 0 2rem var(--neon-border-color),
+                0 0 4rem var(--neon-border-color),
+                inset 0 0 4rem var(--neon-border-color); 
+    color: white;
+  }
+
   .App-link {
     color: #61dafb;
   }
@@ -118,13 +177,21 @@
   }
   .pagination .pagebutton {
     margin: 1.5vh 0.5vh;
-    padding: 0.3vh 2vh;
+    padding: 0.9vh 6vh;
     background-color: #101728;
-    border: 2px solid #1f8187;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
     color: white;
     font-size: 1.5vh;
     border-radius: 10px;
+    cursor: pointer;
   }
+
   .pagebutton:hover {
     color: #b62456;
   }
@@ -143,6 +210,32 @@
     color: white;
   }
   
+  .dropdown {
+    width: 300px;
+    margin:auto;
+    display: flex;
+  }
+
+  .select {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    cursor: pointer;
+    margin: 7px;
+    padding: 0.6vh 4vh;
+    background-color: #101728;
+    box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem var(--neon-border-color),
+                inset 0 0 2rem var(--neon-border-color),
+                0 0 4rem var(--neon-border-color),
+                inset 0 0 4rem var(--neon-border-color); 
+    color: white;
+  }
+
   .App-link {
     color: #61dafb;
   }
@@ -169,14 +262,22 @@
   }
   .pagination .pagebutton {
     margin: 1.5vh 0.5vh;
-    padding: 0.3vh 2vh;
+    padding: 0.9vh 6vh;
     background-color: #101728;
-    border: 2px solid #1f8187;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
     color: white;
     font-size: 1.5vh;
     border-radius: 10px;
+    cursor: pointer;
   }
   .pagebutton:hover {
     color: #b62456;
   } 
 }
+

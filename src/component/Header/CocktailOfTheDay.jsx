@@ -4,7 +4,7 @@ import { BiDrink } from 'react-icons/bi';
 import Cocktail from '../CocktailList/Cocktail';
 import './CocktailOfTheDay.css';
 
-function CocktailOfTheDay({ cocktails }) {
+function CocktailOfTheDay({ cocktails, favorites, setFavorites }) {
   const [randomCocktail, setRandomCocktail] = useState();
 
   const generateRandomCocktail = () => {
@@ -21,9 +21,18 @@ function CocktailOfTheDay({ cocktails }) {
     <div className="dayscocktail">
       { randomCocktail && (
         <div className="drinking">
-          <Cocktail data={randomCocktail} />
+          <Cocktail
+            data={randomCocktail}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
           <div className="drink">
-            <BiDrink size={20} className="button" p onClick={() => generateRandomCocktail()} type="button" />
+            <BiDrink size={70} className="button" p onClick={() => generateRandomCocktail()} type="button" />
+            <div className="text">
+              <text>
+                <p>CHANGE</p>
+              </text>
+            </div>
           </div>
         </div>
       )}
@@ -32,5 +41,7 @@ function CocktailOfTheDay({ cocktails }) {
 }
 CocktailOfTheDay.propTypes = {
   cocktails: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
 };
 export default CocktailOfTheDay;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Cocktail from './Cocktail';
 
-const CocktailList = ({ cocktails }) => {
+const CocktailList = ({ cocktails, favorites, setFavorites }) => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -18,6 +18,8 @@ const CocktailList = ({ cocktails }) => {
           <Cocktail
             data={cocktail}
             key={cocktail.idDrink}
+            favorites={favorites}
+            setFavorites={setFavorites}
           />
         ))}
       </div>
@@ -50,5 +52,7 @@ const CocktailList = ({ cocktails }) => {
 };
 CocktailList.propTypes = {
   cocktails: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
 };
 export default CocktailList;
