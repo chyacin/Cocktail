@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
-
 import Footer from './component/Footer/Footer';
 import Home from './component/Home';
 import Header from './component/Header/Header';
 import CreateCocktail from './component/Header/CreateCocktail';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
 import Favorites from './component/Header/Favorites';
+import useLocalStorage from './component/Header/useLocalStorage';
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
+  const [favorites, setFavorites] = useLocalStorage('favorite-cocktails', []);
 
   useEffect(() => {
     Promise.all(
@@ -49,15 +50,32 @@ function App() {
       <Header />
       <main>
         <Route path="/" exact>
-          <Home cocktails={cocktailList} />
+          <Home
+            cocktails={cocktailList}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
         </Route>
         <Route path="/create" exact>
-          <CreateCocktail cocktails={cocktailList} />
+          <CreateCocktail
+            cocktails={cocktailList}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
         </Route>
         <Route path="/cocktail-of-the-day" exact>
-          <CocktailOfTheDay cocktails={cocktailList} />
+          <CocktailOfTheDay
+            cocktails={cocktailList}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
         </Route>
-        <Route path="/favorites" exact component={Favorites} />
+        <Route path="/favorites" exact>
+          <Favorites
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
+        </Route>
       </main>
       <Footer />
     </BrowserRouter>
