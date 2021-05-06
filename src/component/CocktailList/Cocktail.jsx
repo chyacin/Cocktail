@@ -5,12 +5,16 @@ import Modal from './Modal';
 import IngredientList from './IngredientList';
 import FavoriteButton from '../Header/FavoriteButton';
 
-function Cocktail({ data }) {
+function Cocktail({ data, favorites, setFavorites }) {
   return (
     <div className="cards">
       <div className="card">
         <div className="card-header">
-          <FavoriteButton cocktail={data} />
+          <FavoriteButton
+            cocktail={data}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
           <img className="card-img" src={data.strDrinkThumb} alt="illustration" />
           <div className="card-body">
             <h2 className="card-title">{data.strDrink}</h2>
@@ -47,6 +51,8 @@ Cocktail.propTypes = {
     strIngredient6: PropTypes.string,
     strInstructions: PropTypes.string,
   }).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
 };
 
 export default Cocktail;

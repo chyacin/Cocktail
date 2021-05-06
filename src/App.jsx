@@ -11,12 +11,13 @@ import CreateCocktail from './component/Header/CreateCocktail';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
 import Favorites from './component/Header/Favorites';
 import SearchBar from './component/SearchBar/SearchBar';
+import useLocalStorage from './component/Header/useLocalStorage';
 
 function App() {
   const [cocktailList, setCocktailList] = useState([]);
   const [query, setQuery] = useState('');
   const [page, setPage] = useState(1);
-
+  const [favorites, setFavorites] = useLocalStorage('favorite-cocktails', []);
   useEffect(() => {
     Promise.all(
       'abcdefghijklmnopqrstuvwxyz0123456789'.split('').map((letter) => (
@@ -41,13 +42,16 @@ function App() {
       <Header />
       <Route path="/" exact>
         <SearchBar getQuery={(q) => setQuery(q)} />
-        <CocktailList cocktails={cocktailList.filter(
-          (cocktail) => (
-            cocktail.strDrink.toLowerCase().includes(query.toLowerCase())
-          ),
-        ).slice(
-          (page - 1) * 14, page * 14,
-        )}
+        <CocktailList
+          cocktails={cocktailList.filter(
+            (cocktail) => (
+              cocktail.strDrink.toLowerCase().includes(query.toLowerCase())
+            ),
+          ).slice(
+            (page - 1) * 14, page * 14,
+          )}
+          favorites={favorites}
+          setFavorites={setFavorites}
         />
         <div className="pagination">
           {page > 1 ? <button className="pagebutton" type="button" onClick={() => setPage(page - 1)}>Page précédente</button> : ''}
@@ -55,12 +59,22 @@ function App() {
         </div>
       </Route>
       <Route path="/create" exact component={CreateCocktail}>
-        <CreateCocktail cocktails={cocktailList} />
+        <CreateCocktail
+          cocktails={cocktailList}
+          favorites={favorites}
+          setFavorites={setFavorites}
+        />
       </Route>
       <Route path="/cocktail-of-the-day" exact>
-        <CocktailOfTheDay cocktails={cocktailList} />
+        <CocktailOfTheDay
+          cocktails={cocktailList}
+          favorites={favorites}
+          setFavorites={setFavorites}
+        />
       </Route>
-      <Route path="/favorites" exact component={Favorites} />
+      <Route path="/favorites" exact>
+        <Favorites favorites={favorites} setFavorites={setFavorites} />
+      </Route>
       <Footer />
     </BrowserRouter>
   );

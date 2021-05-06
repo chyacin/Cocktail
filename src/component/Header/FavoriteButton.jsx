@@ -1,33 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { IoIosHeart, IoIosHeartEmpty } from 'react-icons/io';
 
-function FavoriteButton({ cocktail }) {
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    const cocktailFavorites = JSON.parse(localStorage.getItem('favorite-cocktails') || '[]');
-
-    setFavorites(cocktailFavorites);
-  }, []);
-
-  const saveToLocalStorage = (items) => {
-    localStorage.setItem('favorite-cocktails', JSON.stringify(items));
-  };
-
+function FavoriteButton({ cocktail, favorites, setFavorites }) {
   const addFavoriteCocktail = () => {
     const newFavoriteList = [...favorites, cocktail];
     setFavorites(newFavoriteList);
-    saveToLocalStorage(newFavoriteList);
   };
 
   const removeFavoriteCocktail = () => {
     const newFavoriteList = favorites.filter(
       (favorite) => favorite.idDrink !== cocktail.idDrink,
     );
-
     setFavorites(newFavoriteList);
-    saveToLocalStorage(newFavoriteList);
   };
 
   return (
@@ -43,12 +28,15 @@ function FavoriteButton({ cocktail }) {
           onClick={() => removeFavoriteCocktail()}
         />
       )}
-      ;
     </div>
   );
 }
 FavoriteButton.propTypes = {
-  cocktail: PropTypes.func.isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
+  cocktail: PropTypes.shape({
+    idDrink: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default FavoriteButton;
