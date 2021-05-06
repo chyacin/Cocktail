@@ -18,7 +18,7 @@ function CocktailOfTheDay({ cocktails, favorites, setFavorites }) {
     }
   }, [cocktails]);
   return (
-    <div className="contenu">
+    <div className="dayscocktail">
       { randomCocktail && (
         <div className="drinking">
           <Cocktail

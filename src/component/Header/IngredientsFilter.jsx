@@ -9,7 +9,6 @@ function IngredientsFilter({
   return (
     <>
       <div className="dropdown">
-        <div className="dropdown-select">
           <select
             className="select"
             onChange={(e) => {
@@ -17,11 +16,10 @@ function IngredientsFilter({
             }}
             value={selectedIngredient}
           >
-            <option className="option" value="">Select Ingredient</option>
+            <option value="">Select Ingredient</option>
             { ingredients.map((ingredient) => (
               <option key={ingredient} value={ingredient}>{ingredient}</option>))}
           </select>
-        </div>
       </div>
     </>
   );

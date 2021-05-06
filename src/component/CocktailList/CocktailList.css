@@ -15,7 +15,6 @@
         flex-direction: column;
         background-color: whitesmoke;
         border: 3px solid #FFF;
-        height: 290px;
     }
     
     .card-img {
@@ -23,18 +22,10 @@
         height: auto;
         width: 100%;
     }
-
-    .card-body {
-        padding: 0px 20px;
-    }
     
     .card-body h2 {
-        margin: 2vh 0vh 1.5vh 0vh;
         font-size: 1.7em;
-        height: 6vh;
         text-align: center;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
     .card-button {
         border: none;
@@ -53,11 +44,11 @@
         grid-template-columns: 50% 50%;
         justify-content: center;
     }
-    
+    .dayscocktail {
+        display: flex;
+        justify-content: center;
+    }
     .modalButton {
-        display: block;
-        margin : auto;
-        position: static;
         padding: 0.3vh 3vh;
         background-color: #101728;
         border: 2px solid #1f8187;
@@ -182,9 +173,7 @@
     }
     
     .modalButton {
-        display: flex;
-        margin: auto;
-        padding: 0.3vh 5vh;
+        padding: 0.3vh 3vh;
         background-color: #101728;
         border: 2px solid #1f8187;
         color: white;
@@ -301,7 +290,6 @@
         font-size: 18px;
         cursor: pointer;
     }
-    
     .contenu {
         display: flex;
         justify-content: center;

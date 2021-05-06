@@ -90,16 +90,7 @@ body {
         width: 90px;
         height: 90px;
     }
-    .navlist .link {
-        display: table-cell;
-        vertical-align: middle;
-        color: #FFF;
-        border: 2px solid #1f8187;
-        border-radius: 10px;
-        box-shadow: 2px 3px 5px #1f8187;
-        padding: 1vh;
-        width: 15vh;
-    }
+
     .navlist div {
         display: grid;
         align-self: center;
@@ -115,7 +106,6 @@ body {
         margin-bottom: 2vh;
     }
 }
-
 /* IPAD */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
@@ -205,19 +195,6 @@ body {
       .gridstyle h1 {
           margin-right: 4vh;
       }
-      .navlist .link {
-          color: #FFF;
-          border: 2px solid #1f8187;
-          border-radius: 10px;
-          box-shadow: 2px 3px 5px #1f8187;
-          font-size: 1.5vh;
-          padding: 1vh;
-          width: 14vh;
-      }
-      .navlist div {
-          display: inline-flex;
-          justify-content: space-evenly;
-      }
       .navlist {
           display: grid;
           grid-template-columns: 25% 25% 25% 25%;
@@ -225,7 +202,6 @@ body {
           
       }
 }
-
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
 @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
@@ -239,8 +215,8 @@ body {
   --neon-border-color: #1f8187;
 }
 .codeTailsImg {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     margin-left: 4vh;
     margin-top: 2vh;
 }
@@ -258,8 +234,8 @@ body {
 }
 .gridstyle {
     display: grid;
-    grid-template-columns: 10% 90%;
-    margin-right: 16vh;
+    grid-template-columns: 15% 85%;
+    margin-right: 29vh;
 }
 h1::-moz-selection {
   background-color: var(--neon-border-color);
@@ -309,24 +285,29 @@ h1:focus {
 .header {
     border-bottom: 3px solid #d4d519;
 }
-.navlist div {
-    background-color: #101728;
-    border: 2px solid #1f8187;
-    font-size: 2vh;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #1f8187;
-    padding: 0.7vh;
+.navlist .link:hover {
+    color: #b62456;
 }
+}
+
+
 .navlist .link{
     color: #FFF;
+    font-size: 2vh;
+    border-radius: 10px;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+    padding: 1vh;
+    margin: auto;
 }
 .navlist {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 2vh;
-}
-.navlist .link:hover {
-    color: #b62456;
-}
 }
 
