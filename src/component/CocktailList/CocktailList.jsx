@@ -31,7 +31,7 @@ const CocktailList = ({ cocktails, favorites, setFavorites }) => {
               type="button"
               onClick={() => setPage(page - 1)}
             >
-              Page précédente
+              Previous page
             </button>
           )
         }
@@ -42,7 +42,7 @@ const CocktailList = ({ cocktails, favorites, setFavorites }) => {
               type="button"
               onClick={() => setPage(page + 1)}
             >
-              Page suivante
+              Next page
             </button>
           )
         }

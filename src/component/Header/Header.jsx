@@ -21,7 +21,7 @@ const Header = () => (
         </NavLink>
 
         <NavLink className="link" activeClassName="active" exact to="/cocktail-of-the-day">
-          Cocktail of the day
+          Try me !
         </NavLink>
 
         <NavLink className="link" activeClassName="active" exact to="/favorites">

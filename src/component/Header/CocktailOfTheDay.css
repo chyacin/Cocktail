@@ -1,5 +1,6 @@
 /* MOBILE */
 @media screen and (max-width:767px) {
+
     .drink {
         background-color: transparent;
         color: #d4d519;
@@ -7,7 +8,7 @@
         justify-content: flex-end;
         position: absolute;
         top: 42%;
-        left: 118%;
+        left: 100%;
     }
 
     .text{
@@ -22,8 +23,11 @@
         color: #f6fa06;
     }
     
+    .dayscocktail {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 14vh;
     }
-    
     .fav {
         display: flex;
         justify-content: flex-start;
@@ -41,7 +45,7 @@
     }
 }
 /* IPAD */
-@media screen and (min-width: 768px) and (max-width: 1023px){
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     .drink {
         background-color: transparent;
         color: #d4d519;
@@ -63,9 +67,7 @@
     .drink:hover {
         color: #f6fa06;
     }
-    
-    }
-    
+
     .fav {
         display: flex;
         justify-content: flex-start;
@@ -84,9 +86,9 @@
     .dayscocktail {
         display: flex;
         justify-content: center;
+        margin-bottom: 25vh;
     }
 }
-
 /* DESKTOP */
 @media screen and (min-width: 1024px) {
     .drink {
@@ -118,5 +120,10 @@
     
     .drinking {
         position: relative;
-    }    
+    }
+    .dayscocktail {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 22.50vh;
+    }
 }
