@@ -1,21 +1,72 @@
-.drink {
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    top: 8%;
-    left: 83%;
+/* MOBILE */
+@media screen and (max-width:767px) {
+    .drink {
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 8%;
+        left: 83%;
+    }
+    
+    .drink:hover {
+        color: #b62456;
+    }
+    
+    .fav {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .drinking {
+        position: relative;
+    }
 }
-
-.drink:hover {
-    color: #b62456;
+/* IPAD */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .drink {
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 8%;
+        left: 83%;
+    }
+    
+    .drink:hover {
+        color: #b62456;
+    }
+    
+    .fav {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .drinking {
+        position: relative;
+    }    
 }
-
-.fav {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.drinking {
-    position: relative;
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .drink {
+        background-color: transparent;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 8%;
+        left: 83%;
+    }
+    
+    .drink:hover {
+        color: #b62456;
+    }
+    
+    .fav {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .drinking {
+        position: relative;
+    }    
 }

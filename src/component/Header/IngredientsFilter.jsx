@@ -1,25 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const IngredientsFilter = ({ ingredients, CreateList }) => (
-  <>
-    <select className="contenu" onChange={(e) => CreateList(e.target.value)}>
-      <option>Select Ingredient</option>
-      { ingredients.map((ingredient) => (
-        <option key={ingredient}>{ingredient}</option>
-      ))}
-    </select>
-    <select className="contenu">
-      <option>Select Ingredient</option>
-      { ingredients.map((ingredient) => (
-        <option key={ingredient}>{ingredient}</option>
-      ))}
-    </select>
-  </>
-);
+function IngredientsFilter({
+  ingredients,
+  selectedIngredient,
+  setSelectedIngredient,
+}) {
+  return (
+    <>
+      <select
+        className="contenu"
+        onChange={(e) => {
+          setSelectedIngredient(e.target.value);
+        }}
+        value={selectedIngredient}
+      >
+        <option value="">Select Ingredient</option>
+        { ingredients.map((ingredient) => (
+          <option key={ingredient} value={ingredient}>{ingredient}</option>))}
+      </select>
+    </>
+  );
+}
 
 IngredientsFilter.propTypes = {
   ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
-  CreateList: PropTypes.arrayOf(PropTypes.string).isRequired,
+  selectedIngredient: PropTypes.string.isRequired,
+  setSelectedIngredient: PropTypes.func.isRequired,
 };
 export default IngredientsFilter;

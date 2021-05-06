@@ -12,7 +12,7 @@ function Modal({ children }) {
     <div id="myModal" className="modal">
       <div className="modal-content">
         {children}
-        <button type="button" onClick={() => { setIsOpen(false); }} className="card-button">Close</button>
+        <button className="card-button" type="button" onClick={() => { setIsOpen(false); }}>Close</button>
       </div>
     </div>
   );

@@ -1,39 +1,77 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import IngredientsFilter from './IngredientsFilter';
+import CocktailList from '../CocktailList/CocktailList';
 
-function CreateCocktail({ cocktails }) {
+const generateIngredientList = (cocktails) => {
+  const ingredientList = cocktails.reduce((updatedIngredientList, cocktail) => {
+    const mergedArray = [...updatedIngredientList, ...cocktail.strIngredients];
+    const setWithoutDuplicates = new Set(mergedArray);
+    const setAsArray = [...setWithoutDuplicates];
+    return setAsArray;
+  }, []);
+  return ingredientList.sort();
+};
+
+function CreateCocktail({ cocktails, favorites, setFavorites }) {
   const [ingredients, setIngredients] = useState([]);
-  const CreateList = (ingredient) => {
-    console.log(ingredient);
-  };
-  useEffect(() => {
-    // alert(`ingredients should be updated from ${cocktails.length} cocktails`);
-    setIngredients((previousIngredientList) => {
-      const allIngredients = cocktails.reduce((updatedIngredientList, cocktail) => {
-        for (let i = 1; i <= 7; i += 1) {
-          let ingredient = cocktail[`strIngredient${i}`];
-          if (ingredient != null) {
-            ingredient = ingredient.toLowerCase();
-          }
-          if (ingredient != null && ingredient !== '' && !updatedIngredientList.includes(ingredient)) {
-            updatedIngredientList.push(ingredient);
-          }
-        }
-        return updatedIngredientList;
-      }, previousIngredientList);
-      allIngredients.sort();
-      return allIngredients;
-    });
-  }, [cocktails]);
+  const [refinedIngredients, setRefinedIngredients] = useState([]);
+  const [firstSelectedIngredient, setFirstSelectedIngredient] = useState('');
+  const [secondSelectedIngredient, setSecondSelectedIngredient] = useState('');
 
+  useEffect(() => {
+    const allIngredients = generateIngredientList(cocktails);
+    setIngredients(allIngredients);
+    setRefinedIngredients(allIngredients);
+    setFirstSelectedIngredient('');
+    setSecondSelectedIngredient('');
+  }, [cocktails]);
+  useEffect(() => {
+    const allIngredients = generateIngredientList(
+      cocktails.filter((cocktail) => (
+        firstSelectedIngredient === ''
+        || cocktail.strIngredients.includes(firstSelectedIngredient)
+      )),
+    );
+    setRefinedIngredients(
+      allIngredients.filter((ingredient) => ingredient !== firstSelectedIngredient),
+    );
+    setSecondSelectedIngredient('');
+  }, [firstSelectedIngredient]);
   return (
     <div className="strIngredient">
-      <IngredientsFilter ingredients={ingredients} CreateList={CreateList} />
+      {firstSelectedIngredient}
+      {secondSelectedIngredient}
+      <IngredientsFilter
+        ingredients={ingredients}
+        selectedIngredient={firstSelectedIngredient}
+        setSelectedIngredient={setFirstSelectedIngredient}
+      />
+      <IngredientsFilter
+        ingredients={refinedIngredients}
+        selectedIngredient={secondSelectedIngredient}
+        setSelectedIngredient={setSecondSelectedIngredient}
+      />
+      <CocktailList
+        cocktails={cocktails.filter((cocktail) => (
+          (
+            firstSelectedIngredient === ''
+            || cocktail.strIngredients.includes(firstSelectedIngredient)
+          )
+          && (
+            secondSelectedIngredient === ''
+            || cocktail.strIngredients.includes(secondSelectedIngredient)
+          )
+        ))}
+        favorites={favorites}
+        setFavorites={setFavorites}
+      />
     </div>
   );
 }
 CreateCocktail.propTypes = {
   cocktails: PropTypes.arrayOf(PropTypes.object).isRequired,
+  favorites: PropTypes.arrayOf(PropTypes.object).isRequired,
+  setFavorites: PropTypes.func.isRequired,
 };
 export default CreateCocktail;
