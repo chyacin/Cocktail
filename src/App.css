@@ -34,7 +34,7 @@
 
   .select {
     border-radius: 10px;
-    width: 100%;
+    width: 40vh;
     display: flex;
     align-items: center;
     font-size: 1.8vh;
@@ -133,7 +133,7 @@
 
   .select {
     border-radius: 10px;
-    width: 100%;
+    width: 40vh;
     display: flex;
     align-items: center;
     font-size: 1.8vh;
@@ -218,7 +218,7 @@
 
   .select {
     border-radius: 10px;
-    width: 100%;
+    width: 40vh;
     display: flex;
     align-items: center;
     font-size: 1.8vh;
