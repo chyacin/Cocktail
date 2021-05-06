@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
 
 import Footer from './component/Footer/Footer';
-import CocktailList from './component/CocktailList/CocktailList';
+import Home from './component/Home';
 import Header from './component/Header/Header';
 import CreateCocktail from './component/Header/CreateCocktail';
 import CocktailOfTheDay from './component/Header/CocktailOfTheDay';
@@ -24,9 +24,21 @@ function App() {
           if (response.data.drinks == null) {
             return acc;
           }
+          const mappedCocktails = response.data.drinks.map((cocktail) => {
+            const ingredients = [];
+
+            for (let i = 1; i <= 15; i += 1) {
+              const ingredient = cocktail[`strIngredient${i}`];
+              if (ingredient != null && ingredient !== '') {
+                ingredients.push(ingredient.toLowerCase());
+              }
+            }
+
+            return { ...cocktail, strIngredients: ingredients };
+          });
           return [
             ...acc,
-            ...response.data.drinks.sort((a, b) => a.strDrink.localeCompare(b.strDrink)),
+            ...mappedCocktails.sort((a, b) => a.strDrink.localeCompare(b.strDrink)),
           ];
         }, []),
       );
@@ -37,7 +49,7 @@ function App() {
       <Header />
       <main>
         <Route path="/" exact>
-          <CocktailList cocktails={cocktailList} />
+          <Home cocktails={cocktailList} />
         </Route>
         <Route path="/create" exact>
           <CreateCocktail cocktails={cocktailList} />
