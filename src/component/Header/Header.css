@@ -17,7 +17,7 @@ body {
       
       /* Set neon color */
       --neon-text-color: #b62456;
-      --neon-border-color: #ff8b8b;
+      --neon-border-color: #1f8187;
     }
     .header h1 {
         display: flex;
