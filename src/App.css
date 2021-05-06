@@ -26,125 +26,10 @@
     color: white;
   }
   
-  .App-link {
-    color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  body{
-    background-image: url("component/Images/backgroundimg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .hello {
-    color: rgb(255, 255, 255); 
-  }
-  .pagination {
-    display: flex;
-    justify-content: center;
-  }
-  .pagination .pagebutton {
-    margin: 1.5vh 0.5vh;
-    padding: 0.3vh 2vh;
-    background-color: #101728;
-    border: 2px solid #1f8187;
-    color: white;
-    font-size: 1.5vh;
-    border-radius: 10px;
-  }
-  .pagebutton:hover {
-    color: #b62456;
-  }
-}
-
-/* IPAD */
-@media screen and (min-width: 768px) and (max-width: 1023px){
-  .App {
-    text-align: center;
-  }
-  
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    }
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  body{
-    background-image: url("component/Images/backgroundimg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .hello {
-    color: rgb(255, 255, 255); 
-  }
-  .pagination {
-    display: flex;
-    justify-content: center;
-  }
-  .pagination .pagebutton {
-    margin: 1.5vh 0.5vh;
-    padding: 0.3vh 2vh;
-    background-color: #101728;
-    border: 2px solid #1f8187;
-    color: white;
-    font-size: 1.5vh;
-    border-radius: 10px;
-  }
-  .pagebutton:hover {
-    color: #b62456;
-  }
-}
-
-/* DESKTOP */
-@media screen and (min-width: 1024px) {
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
   .dropdown {
     width: 300px;
+    margin:auto;
+    display: flex;
   }
 
   .select {
@@ -154,8 +39,7 @@
     align-items: center;
     font-size: 1.8vh;
     cursor: pointer;
-    margin:15px;
-    margin-left: 525px;
+    margin: 7px;
     padding: 0.6vh 4vh;
     background-color: #101728;
     box-shadow:
@@ -194,12 +78,203 @@
   }
   .pagination .pagebutton {
     margin: 1.5vh 0.5vh;
-    padding: 0.3vh 2vh;
+    padding: 0.9vh 6vh;
     background-color: #101728;
-    border: 2px solid #1f8187;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
     color: white;
     font-size: 1.5vh;
     border-radius: 10px;
+    cursor: pointer;
+  }
+  .pagebutton:hover {
+    color: #b62456;
+  }
+}
+
+/* IPAD */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .dropdown {
+    width: 300px;
+    margin:auto;
+    display: flex;
+  }
+
+  .select {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    cursor: pointer;
+    margin: 7px;
+    padding: 0.6vh 4vh;
+    background-color: #101728;
+    box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem var(--neon-border-color),
+                inset 0 0 2rem var(--neon-border-color),
+                0 0 4rem var(--neon-border-color),
+                inset 0 0 4rem var(--neon-border-color); 
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  body{
+    background-image: url("component/Images/backgroundimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hello {
+    color: rgb(255, 255, 255); 
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .pagination .pagebutton {
+    margin: 1.5vh 0.5vh;
+    padding: 0.9vh 6vh;
+    background-color: #101728;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+    color: white;
+    font-size: 1.5vh;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .pagebutton:hover {
+    color: #b62456;
+  }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .dropdown {
+    width: 300px;
+    margin:auto;
+    display: flex;
+  }
+
+  .select {
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.8vh;
+    cursor: pointer;
+    margin: 7px;
+    padding: 0.6vh 4vh;
+    background-color: #101728;
+    box-shadow:
+                0 0 .5rem #fff,
+                inset 0 0 .5rem #fff,
+                0 0 2rem var(--neon-border-color),
+                inset 0 0 2rem var(--neon-border-color),
+                0 0 4rem var(--neon-border-color),
+                inset 0 0 4rem var(--neon-border-color); 
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  body{
+    background-image: url("component/Images/backgroundimg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hello {
+    color: rgb(255, 255, 255); 
+  }
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .pagination .pagebutton {
+    margin: 1.5vh 0.5vh;
+    padding: 0.9vh 6vh;
+    background-color: #101728;
+    box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+    color: white;
+    font-size: 1.5vh;
+    border-radius: 10px;
+    cursor: pointer;
   }
   .pagebutton:hover {
     color: #b62456;
