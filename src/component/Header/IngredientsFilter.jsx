@@ -9,17 +9,17 @@ function IngredientsFilter({
   return (
     <>
       <div className="dropdown">
-          <select
-            className="select"
-            onChange={(e) => {
-              setSelectedIngredient(e.target.value);
-            }}
-            value={selectedIngredient}
-          >
-            <option value="">Select Ingredient</option>
-            { ingredients.map((ingredient) => (
-              <option key={ingredient} value={ingredient}>{ingredient}</option>))}
-          </select>
+        <select
+          className="select"
+          onChange={(e) => {
+            setSelectedIngredient(e.target.value);
+          }}
+          value={selectedIngredient}
+        >
+          <option value="">Select Ingredient</option>
+          { ingredients.map((ingredient) => (
+            <option key={ingredient} value={ingredient}>{ingredient}</option>))}
+        </select>
       </div>
     </>
   );

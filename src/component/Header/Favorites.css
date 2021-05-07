@@ -6,29 +6,8 @@
         font-family: Arial, Helvetica, sans-serif;
         color: white;
     }
-}
 
-/* IPAD */
-@media screen and (min-width: 768px) and (max-width: 1023px){
-    .myFavorites h1 {
-        font-size: medium;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-    }
-}
-
-/* DESKTOP */
-@media screen and (min-width: 1024px) {
-    .myFavorites h1 {
-        font-size: medium;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-    }
-}
-
-.favoriteTitle {
+    .favoriteTitle {
     text-align: center;
     color: white;
     font-size:35px;
@@ -38,20 +17,20 @@
 
 }
 
-.favoriteCocktail {
+    .favoriteCocktail {
     display: flex;
     justify-content: center;
-    margin-bottom: 100px;
-    margin-top: 60px;
+    margin-bottom: 1vh;
+
 }
-.favoriteCocktail .cards {
+    .favoriteCocktail .cards {
     margin-top: 10px;
     align-items: center;
     display: inline-flex;
     justify-content: center;
 }
 
-.favoriteCocktail .card {
+    .favoriteCocktail .card {
     border-radius: 10px;
     width: 280px;
     margin: 15px;
@@ -62,24 +41,24 @@
     height: 400px;
 }
 
-.favoriteCocktail .card-img {
+    .favoriteCocktail .card-img {
     border-radius: 10px 10px 0 0;
     height: auto;
     width: 100%;
 }
 
-.favoriteCocktail .card-body {
+    .favoriteCocktail .card-body {
     padding: 0px 20px;
 }
 
-.favoriteCocktail .card-body h2 {
+    .favoriteCocktail .card-body h2 {
     font-size: 1.7em;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.favoriteCocktail .modalButton {
+    .favoriteCocktail .modalButton {
     display: block;
     margin : auto;
     position: static;
@@ -89,4 +68,151 @@
     color: white;
     font-size: 2vh;
     border-radius: 10px;
+}
+}
+
+/* IPAD */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .myFavorites h1 {
+        font-size: medium;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    .favoriteTitle {
+    text-align: center;
+    color: white;
+    font-size:35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; 
+    text-decoration-color:#d4d519 ;
+
+}
+
+    .favoriteCocktail {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20.5vh;
+
+}
+    .favoriteCocktail .cards {
+    margin-top: 10px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+    .favoriteCocktail .card {
+    border-radius: 10px;
+    width: 280px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 3px solid #FFF;
+    height: 400px;
+}
+
+    .favoriteCocktail .card-img {
+    border-radius: 10px 10px 0 0;
+    height: auto;
+    width: 100%;
+}
+
+    .favoriteCocktail .card-body {
+    padding: 0px 20px;
+}
+
+    .favoriteCocktail .card-body h2 {
+    font-size: 1.7em;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .favoriteCocktail .modalButton {
+    display: block;
+    margin : auto;
+    position: static;
+    padding: 0.3vh 3vh;
+    background-color: #101728;
+    border: 2px solid #1f8187;
+    color: white;
+    font-size: 2vh;
+    border-radius: 10px;
+}
+}
+
+/* DESKTOP */
+@media screen and (min-width: 1024px) {
+    .myFavorites h1 {
+        font-size: medium;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    .favoriteTitle {
+    text-align: center;
+    color: white;
+    font-size:35px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline; 
+    text-decoration-color:#d4d519 ;
+
+}
+
+    .favoriteCocktail {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+
+}
+    .favoriteCocktail .cards {
+    margin-top: 10px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+}
+
+    .favoriteCocktail .card {
+    border-radius: 10px;
+    width: 280px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    border: 3px solid #FFF;
+    height: 400px;
+}
+
+    .favoriteCocktail .card-img {
+    border-radius: 10px 10px 0 0;
+    height: auto;
+    width: 100%;
+}
+
+    .favoriteCocktail .card-body {
+    padding: 0px 20px;
+}
+
+    .favoriteCocktail .card-body h2 {
+    font-size: 1.7em;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .favoriteCocktail .modalButton {
+    display: block;
+    margin : auto;
+    position: static;
+    padding: 0.3vh 3vh;
+    background-color: #101728;
+    border: 2px solid #1f8187;
+    color: white;
+    font-size: 2vh;
+    border-radius: 10px;
+}
 }

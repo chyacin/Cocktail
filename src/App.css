@@ -39,11 +39,11 @@
     align-items: center;
     font-size: 1.8vh;
     cursor: pointer;
-    margin: 7px;
+    margin-top: 2vh;
     padding: 0.6vh 4vh;
     background-color: #101728;
     box-shadow:
-                0 0 .5rem #fff,
+                0 0 .5rem #1f8187,
                 inset 0 0 .5rem #fff,
                 0 0 2rem var(--neon-border-color),
                 inset 0 0 2rem var(--neon-border-color),
@@ -81,7 +81,7 @@
     padding: 0.9vh 6vh;
     background-color: #101728;
     box-shadow:
-            0 0 .5rem #fff,
+            0 0 .5rem #1f8187,
             inset 0 0 .5rem #fff,
             0 0 2rem var(--neon-border-color),
             inset 0 0 2rem var(--neon-border-color),
@@ -138,11 +138,11 @@
     align-items: center;
     font-size: 1.8vh;
     cursor: pointer;
-    margin: 7px;
+    margin-top: 2vh;
     padding: 0.6vh 4vh;
     background-color: #101728;
     box-shadow:
-                0 0 .5rem #fff,
+                0 0 .5rem #1f8187,
                 inset 0 0 .5rem #fff,
                 0 0 2rem var(--neon-border-color),
                 inset 0 0 2rem var(--neon-border-color),
@@ -180,7 +180,7 @@
     padding: 0.9vh 6vh;
     background-color: #101728;
     box-shadow:
-            0 0 .5rem #fff,
+            0 0 .5rem #1f8187,
             inset 0 0 .5rem #fff,
             0 0 2rem var(--neon-border-color),
             inset 0 0 2rem var(--neon-border-color),
@@ -223,11 +223,11 @@
     align-items: center;
     font-size: 1.8vh;
     cursor: pointer;
-    margin: 7px;
+    margin-top: 2vh;
     padding: 0.6vh 4vh;
     background-color: #101728;
     box-shadow:
-                0 0 .5rem #fff,
+                0 0 .5rem #1f8187,
                 inset 0 0 .5rem #fff,
                 0 0 2rem var(--neon-border-color),
                 inset 0 0 2rem var(--neon-border-color),
@@ -265,7 +265,7 @@
     padding: 0.9vh 6vh;
     background-color: #101728;
     box-shadow:
-            0 0 .5rem #fff,
+            0 0 .5rem #1f8187,
             inset 0 0 .5rem #fff,
             0 0 2rem var(--neon-border-color),
             inset 0 0 2rem var(--neon-border-color),
